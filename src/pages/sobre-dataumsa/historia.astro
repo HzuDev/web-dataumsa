@@ -1,0 +1,477 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Badge from "../../components/components-astro/Badge.astro";
+import Button from "../../components/components-astro/Button.astro";
+import TextReveal from "../../components/components-astro/TextReveal.astro";
+import {
+    FiBookOpen,
+    FiCalendar,
+    FiCheckCircle,
+    FiFileText,
+    FiTrendingUp,
+    FiGlobe,
+    FiUsers,
+    FiArrowRight,
+} from "react-icons/fi";
+---
+
+<Layout
+    title="Nuestra Historia | DataUMSA"
+    description="Descubre el origen de DataUMSA, desde una iniciativa estudiantil para el Censo Universitario 2025 hasta convertirse en un proyecto de vocación institucional."
+>
+    <!-- Split Hero Section (Historia) -->
+    <section
+        class="w-full py-20 md:py-32 relative overflow-hidden flex items-center justify-center"
+    >
+        <!-- Luces de fondo -->
+        <div
+            class="absolute top-1/4 left-1/3 w-[600px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow"
+        >
+        </div>
+
+        <div
+            class="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10"
+        >
+            <!-- Texto de Introducción -->
+            <div class="lg:col-span-7 flex flex-col justify-center">
+                <Badge variant="primary" class="mb-6 self-start">
+                    Nuestros Orígenes
+                </Badge>
+                <h1
+                    class="text-text-main font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
+                >
+                    Nuestra <TextReveal variant="light">Historia</TextReveal>
+                </h1>
+                <p
+                    class="text-text-muted font-sans text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-medium"
+                >
+                    El camino recorrido desde una iniciativa de estudiantes de
+                    Estadística e Informática hasta consolidar un proyecto
+                    tecnológico con vocación institucional para la Universidad
+                    Mayor de San Andrés.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <Button
+                        href="#hitos"
+                        variant="bento-primary"
+                        class="text-sm"
+                    >
+                        <span>Ver los Hitos</span>
+                    </Button>
+                    <Button
+                        href="/sobre-dataumsa/equipo-institucional"
+                        variant="bento-secondary"
+                        class="text-sm"
+                    >
+                        <span>Conocer al Equipo</span>
+                    </Button>
+                </div>
+            </div>
+
+            <!-- Ilustración CSS: Transición de papel a digital -->
+            <div
+                class="lg:col-span-5 flex items-center justify-center relative min-h-[350px]"
+            >
+                <div
+                    class="w-72 h-72 relative flex items-center justify-center"
+                >
+                    <!-- Celular Digitalizador (Derecha) -->
+                    <div
+                        class="absolute w-44 h-72 rounded-[2rem] border-8 border-slate-900 bg-slate-950 shadow-xl translate-x-12 translate-y-6 rotate-[10deg] flex flex-col justify-between p-3 overflow-hidden"
+                    >
+                        <div
+                            class="w-16 h-3 bg-slate-900 rounded-b-lg mx-auto mb-2"
+                        >
+                        </div>
+                        <div
+                            class="flex-grow flex flex-col gap-2 justify-center"
+                        >
+                            <div
+                                class="w-full h-12 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center text-primary-light"
+                            >
+                                <FiCheckCircle
+                                    className="w-5 h-5 animate-bounce text-primary"
+                                />
+                            </div>
+                            <div class="w-full h-1.5 rounded-full bg-slate-800">
+                            </div>
+                            <div class="w-2/3 h-1.5 rounded-full bg-slate-800">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hoja de Papel (Izquierda) -->
+                    <div
+                        class="absolute w-40 h-56 bg-white border border-border rounded-lg shadow-lg -translate-x-16 -translate-y-6 rotate-[-15deg] p-4 flex flex-col justify-between transform hover:rotate-0 transition-transform duration-500 z-10"
+                    >
+                        <div class="flex flex-col gap-2">
+                            <div
+                                class="flex items-center gap-2 border-b border-border pb-1.5"
+                            >
+                                <FiFileText
+                                    className="text-slate-400 w-4 h-4"
+                                />
+                                <span
+                                    class="text-[8px] font-bold text-text-muted"
+                                    >CENSO 2025</span
+                                >
+                            </div>
+                            <div class="w-full h-1 bg-slate-100 rounded-xs">
+                            </div>
+                            <div class="w-full h-1 bg-slate-100 rounded-xs">
+                            </div>
+                            <div class="w-4/5 h-1 bg-slate-100 rounded-xs">
+                            </div>
+                        </div>
+                        <!-- Partículas voladoras de datos en CSS -->
+                        <div
+                            class="absolute -right-4 top-1/2 flex flex-col gap-2"
+                        >
+                            <span
+                                class="w-2 h-2 rounded-full bg-primary/60 animate-[ping_2s_infinite]"
+                            ></span>
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-accent/60 animate-[ping_1.5s_infinite_0.5s]"
+                            ></span>
+                        </div>
+                        <span class="text-[7px] font-mono text-slate-300"
+                            >Método Tradicional</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hitos de la Historia (Staggered Timeline) -->
+    <section
+        id="hitos"
+        class="w-full py-24 bg-slate-50/75 border-y border-border relative overflow-hidden flex flex-col items-center"
+    >
+        <div class="max-w-5xl w-full mx-auto px-6 relative z-10">
+            <!-- Timeline Vertical -->
+            <div class="relative flex flex-col gap-20 md:gap-28">
+                <!-- Línea de Conexión Central -->
+                <div
+                    class="absolute left-6 md:left-1/2 -translate-x-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-primary/10 via-primary/40 to-primary/10"
+                >
+                </div>
+
+                <!-- HITO 1: EL ORIGEN (Texto Izquierda, Ilustración Derecha) -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 relative w-full"
+                >
+                    <!-- Icono de Hito -->
+                    <div
+                        class="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border border-border text-primary-dark font-mono font-bold flex items-center justify-center shadow-lg shadow-primary/10 z-20"
+                    >
+                        <FiCalendar className="w-5 h-5" />
+                    </div>
+
+                    <!-- Lado del Texto -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 md:text-right flex flex-col md:items-end"
+                    >
+                        <span
+                            class="text-primary font-bold text-xs uppercase tracking-wider mb-1.5"
+                            >Origen // Censo 2025</span
+                        >
+                        <h3
+                            class="text-text-main font-display text-2xl font-black mb-4"
+                        >
+                            El reto de <TextReveal variant="light"
+                                >digitalizar</TextReveal
+                            > la universidad
+                        </h3>
+                        <p
+                            class="text-text-muted font-sans text-sm md:text-base leading-relaxed max-w-md"
+                        >
+                            DataUMSA nació como una iniciativa de estudiantes de
+                            las carreras de **Estadística e Informática** de la
+                            Universidad Mayor de San Andrés. Su origen responde
+                            a una necesidad concreta: la realización del **Censo
+                            Universitario 2025**. Frente a la posibilidad de
+                            llevar a cabo el censo mediante métodos
+                            tradicionales de papel y lápiz, el equipo identificó
+                            la oportunidad de automatizar y digitalizar todo el
+                            proceso de recolección de datos. Así surgió
+                            DataUMSA, una plataforma desarrollada internamente
+                            para responder a las demandas reales de la
+                            universidad.
+                        </p>
+                    </div>
+
+                    <!-- Lado de la Ilustración CSS -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pl-16 flex justify-start"
+                    >
+                        <div
+                            class="w-full max-w-[300px] h-40 rounded-2xl bg-white border border-border shadow-sm flex items-center justify-around relative overflow-hidden group"
+                        >
+                            <!-- Hoja Cancelada -->
+                            <div
+                                class="w-24 h-32 bg-slate-50 border border-border rounded p-2 flex flex-col justify-between relative transform group-hover:rotate-[-5deg] transition-transform"
+                            >
+                                <div
+                                    class="w-full h-1.5 bg-slate-200 rounded-xs"
+                                >
+                                </div>
+                                <div
+                                    class="w-3/4 h-1.5 bg-slate-200 rounded-xs"
+                                >
+                                </div>
+                                <div
+                                    class="w-full h-1.5 bg-slate-200 rounded-xs"
+                                >
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center"
+                                >
+                                    <span
+                                        class="w-16 h-0.5 bg-red-500 rotate-[45deg] absolute"
+                                    ></span>
+                                    <span
+                                        class="w-16 h-0.5 bg-red-500 rotate-[-45deg] absolute"
+                                    ></span>
+                                </div>
+                            </div>
+                            <FiArrowRight className="w-6 h-6 text-slate-300" />
+                            <!-- Servidor Activo -->
+                            <div
+                                class="w-24 h-32 rounded-xl bg-slate-900 border border-white/5 p-3 flex flex-col justify-between text-white font-mono"
+                            >
+                                <div
+                                    class="w-full h-6 rounded bg-primary/20 border border-primary/30 flex items-center justify-center text-[8px] font-bold"
+                                >
+                                    SQL_DB
+                                </div>
+                                <div
+                                    class="w-full h-1 bg-slate-800 rounded-full"
+                                >
+                                </div>
+                                <div
+                                    class="w-4/5 h-1 bg-slate-800 rounded-full"
+                                >
+                                </div>
+                                <span class="text-[7px] text-slate-500"
+                                    >100% Digital</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HITO 2: VALIDACIÓN TÉCNICA (Texto Derecha, Ilustración Izquierda) -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 relative w-full md:flex-row-reverse"
+                >
+                    <!-- Icono de Hito -->
+                    <div
+                        class="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border border-border text-primary-dark font-mono font-bold flex items-center justify-center shadow-lg shadow-primary/10 z-20"
+                    >
+                        <FiTrendingUp className="w-5 h-5" />
+                    </div>
+
+                    <!-- Lado del Texto -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pl-0 md:pl-16 flex flex-col"
+                    >
+                        <span
+                            class="text-primary font-bold text-xs uppercase tracking-wider mb-1.5"
+                            >Impacto // Cobertura</span
+                        >
+                        <h3
+                            class="text-text-main font-display text-2xl font-black mb-4"
+                        >
+                            Censo exitoso de <TextReveal variant="light"
+                                >más del 90%</TextReveal
+                            >
+                        </h3>
+                        <p
+                            class="text-text-muted font-sans text-sm md:text-base leading-relaxed max-w-md"
+                        >
+                            Gracias a esta herramienta se logró censar **más del
+                            90% de la población estudiantil** de la UMSA de
+                            manera digital, eficiente y con altos estándares de
+                            calidad. Este primer gran proyecto validó la
+                            capacidad técnica y operativa de la plataforma,
+                            procesando miles de respuestas simultáneas sin
+                            incidentes de seguridad.
+                        </p>
+                    </div>
+
+                    <!-- Lado de la Ilustración CSS -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pr-16 flex justify-start md:justify-end"
+                    >
+                        <div
+                            class="w-full max-w-[300px] h-40 rounded-2xl bg-white border border-border shadow-sm flex items-center justify-center relative overflow-hidden"
+                        >
+                            <!-- Gráfico CSS circular de porcentaje con ondas de agua -->
+                            <div
+                                class="w-28 h-28 rounded-full bg-slate-50 border border-border flex items-center justify-center relative overflow-hidden"
+                            >
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 h-[90%] bg-primary/20 border-t border-primary/40 animate-[wave_3s_infinite_linear]"
+                                >
+                                </div>
+                                <span
+                                    class="text-3xl font-black text-primary-dark font-display relative z-10"
+                                    >90%+</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HITO 3: VOCACIÓN INSTITUCIONAL (Texto Izquierda, Ilustración Derecha) -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 relative w-full"
+                >
+                    <!-- Icono de Hito -->
+                    <div
+                        class="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border border-border text-primary-dark font-mono font-bold flex items-center justify-center shadow-lg shadow-primary/10 z-20"
+                    >
+                        <FiGlobe className="w-5 h-5" />
+                    </div>
+
+                    <!-- Lado del Texto -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 md:text-right flex flex-col md:items-end"
+                    >
+                        <span
+                            class="text-primary font-bold text-xs uppercase tracking-wider mb-1.5"
+                            >Visión // Proyección</span
+                        >
+                        <h3
+                            class="text-text-main font-display text-2xl font-black mb-4"
+                        >
+                            Vocación e <TextReveal variant="light"
+                                >impacto institucional</TextReveal
+                            >
+                        </h3>
+                        <p
+                            class="text-text-muted font-sans text-sm md:text-base leading-relaxed max-w-md"
+                        >
+                            Impulsada por la innovación y la convicción de que
+                            los universitarios e investigadores merecen
+                            herramientas avanzadas para la recolección de datos,
+                            DataUMSA busca trascender su uso inicial y
+                            consolidarse como una solución estratégica para toda
+                            la comunidad universitaria, abriendo el camino para
+                            tesis, censos y diagnósticos sociales.
+                        </p>
+                    </div>
+
+                    <!-- Lado de la Ilustración CSS -->
+                    <div
+                        class="w-full md:w-1/2 pl-16 md:pl-16 flex justify-start"
+                    >
+                        <div
+                            class="w-full max-w-[300px] h-40 rounded-2xl bg-white border border-border shadow-sm flex items-center justify-center relative overflow-hidden"
+                        >
+                            <!-- Escudo abstracto universitario con nodos heráldicos en CSS -->
+                            <div
+                                class="w-24 h-24 border-2 border-dashed border-primary/30 rounded-full flex items-center justify-center relative animate-spin-slow"
+                            >
+                                <div
+                                    class="absolute w-3 h-3 rounded-full bg-primary -top-1.5"
+                                >
+                                </div>
+                                <div
+                                    class="absolute w-3 h-3 rounded-full bg-primary -bottom-1.5"
+                                >
+                                </div>
+                                <div
+                                    class="absolute w-3 h-3 rounded-full bg-accent -left-1.5"
+                                >
+                                </div>
+                                <div
+                                    class="absolute w-3 h-3 rounded-full bg-accent -right-1.5"
+                                >
+                                </div>
+                            </div>
+                            <div
+                                class="absolute w-14 h-18 border-2 border-primary-dark bg-primary/5 rounded-md flex items-center justify-center font-display font-black text-primary-dark"
+                            >
+                                UMSA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Cierre Cita -->
+    <section
+        class="w-full py-20 px-6 relative overflow-hidden flex justify-center"
+    >
+        <!-- Luces decorativas -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/15 via-primary-dark/5 to-transparent -z-10"
+        >
+        </div>
+
+        <div
+            class="max-w-4xl w-full text-center relative z-10 flex flex-col items-center gap-6"
+        >
+            <span class="w-12 h-0.5 bg-primary rounded-full mb-2"></span>
+            <blockquote
+                class="text-text-main font-display text-2xl md:text-3xl lg:text-4xl font-black italic tracking-tight leading-snug max-w-3xl"
+            >
+                "De una necesidad específica, nació un proyecto con vocación
+                institucional."
+            </blockquote>
+            <p
+                class="text-text-muted font-sans text-sm md:text-base mt-2 max-w-md font-medium"
+            >
+                Conoce al equipo técnico y académico que impulsa esta plataforma
+                de datos soberana.
+            </p>
+            <Button
+                href="/sobre-dataumsa/equipo-institucional"
+                variant="bento-primary"
+                class="group text-sm"
+            >
+                <span>Conocer el Equipo</span>
+                <FiArrowRight
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                />
+            </Button>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    /* Estilos de animación personalizados para la historia */
+    .animate-pulse-slow {
+        animation: pulse-glow 8s ease-in-out infinite alternate;
+    }
+    .animate-spin-slow {
+        animation: spin 20s linear infinite;
+    }
+
+    @keyframes pulse-glow {
+        0% {
+            opacity: 0.3;
+            transform: scale(0.95);
+        }
+        100% {
+            opacity: 0.7;
+            transform: scale(1.05);
+        }
+    }
+
+    @keyframes wave {
+        0% {
+            transform: translateY(0) scaleY(1);
+        }
+        50% {
+            transform: translateY(5px) scaleY(0.95);
+        }
+        100% {
+            transform: translateY(0) scaleY(1);
+        }
+    }
+</style>

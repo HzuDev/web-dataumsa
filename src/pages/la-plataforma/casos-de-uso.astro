@@ -1,0 +1,870 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Badge from "../../components/components-astro/Badge.astro";
+import Button from "../../components/components-astro/Button.astro";
+import TextReveal from "../../components/components-astro/TextReveal.astro";
+import {
+  FiBookOpen,
+  FiUsers,
+  FiClipboard,
+  FiGlobe,
+  FiArrowRight,
+  FiCheck,
+  FiDownload,
+  FiDatabase,
+  FiWifiOff,
+  FiRefreshCw,
+  FiMapPin,
+  FiTrendingUp,
+  FiTerminal,
+} from "react-icons/fi";
+---
+
+<Layout
+  title="Casos de Uso | DataUMSA"
+  description="Descubre las aplicaciones prácticas, casos de estudio y ejemplos de implementación de DataUMSA en la academia y la investigación."
+>
+  <section
+    class="w-full py-24 md:py-32 relative overflow-hidden flex flex-col items-center"
+  >
+    <!-- Hero Section -->
+    <div
+      class="flex flex-col items-center text-center mb-24 md:mb-32 w-full max-w-7xl px-6"
+    >
+      <Badge variant="primary" class="mb-6"> Flexibilidad y Aplicación </Badge>
+      <h1
+        class="text-text-main font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl mb-6"
+      >
+        ¿Para qué puedes usar <br class="hidden md:block" />
+        <TextReveal variant="light">DataUMSA?</TextReveal>
+      </h1>
+      <p
+        class="text-text-muted font-sans text-lg md:text-xl max-w-2xl font-medium"
+      >
+        De la recolección de tesis individuales a censos poblacionales de gran
+        escala. Conoce los escenarios donde nuestra infraestructura marca la
+        diferencia.
+      </p>
+    </div>
+
+    <!-- Contenido de Casos de Uso (Z-Pattern / Alternante) -->
+    <div
+      class="w-full max-w-7xl px-6 flex flex-col gap-32 md:gap-48 relative z-10"
+    >
+      <!-- CASO 1: INVESTIGACIÓN Y TESIS (Texto Izquierda, Ilustración Derecha) -->
+      <div
+        id="tesis"
+        class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 scroll-mt-28"
+      >
+        <!-- Columna de Texto -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-12 h-12 rounded-[var(--radius-md)] bg-primary/10 border border-primary/25 flex items-center justify-center text-primary-dark"
+            >
+              <FiBookOpen class="w-6 h-6" strokeWidth={2} />
+            </div>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-primary-dark font-mono"
+              >Caso de Uso 01</span
+            >
+          </div>
+
+          <h2
+            class="text-text-main font-display text-3xl md:text-4xl font-black leading-tight mb-6"
+          >
+            Investigación Científica y Tesis de Grado
+          </h2>
+
+          <div
+            class="text-text-muted font-sans text-base md:text-lg leading-relaxed space-y-6 mb-8"
+          >
+            <p>
+              La investigación académica rigurosa exige precisión metodológica,
+              consistencia en los datos y el cumplimiento de altos estándares
+              éticos. DataUMSA proporciona a tesistas de pregrado, posgrado e
+              investigadores institucionales una infraestructura robusta para
+              recolectar datos complejos sin las limitaciones ni el sesgo de las
+              herramientas comerciales comunes.
+            </p>
+            <p>
+              Mediante el estándar **XLSForm**, los investigadores pueden
+              programar validaciones lógicas avanzadas en el dispositivo móvil
+              (por ejemplo, asegurar que el peso y la talla ingresados estén en
+              rangos realistas y calcular el IMC al instante), reduciendo
+              drásticamente la tasa de error en la captura inicial.
+            </p>
+
+            <!-- Puntos clave con Checks -->
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-primary/15 text-primary-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Soberanía de datos:** Información guardada localmente bajo
+                  la normativa y seguridad de la UMSA.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-primary/15 text-primary-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Interoperabilidad Directa:** Exportación nativa a formatos
+                  SPSS (`.sav`), Stata (`.dta`), R y Excel.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Caja de Ejemplo Práctico -->
+          <div
+            class="bg-bg-main border border-border rounded-[var(--radius-md)] p-6 mb-8"
+          >
+            <span
+              class="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2 font-mono"
+              >Ejemplo Práctico en la UMSA</span
+            >
+            <p class="text-text-main text-sm font-medium leading-relaxed">
+              *Tesis de la Facultad de Medicina:* Evaluación del impacto
+              nutricional en comunidades rurales del Altiplano. El tesista
+              diseña un formulario que calcula el estado nutricional
+              automáticamente. Si el resultado indica desnutrición severa, el
+              formulario activa de forma obligatoria la toma de coordenadas GPS
+              y captura fotográfica de la vivienda del paciente para coordinar
+              asistencia social.
+            </p>
+          </div>
+
+          <div>
+            <Button
+              href="/la-plataforma/caracteristicas"
+              variant="bento-secondary"
+              class="group/btn text-sm"
+            >
+              <span>Ver especificaciones de diseño</span>
+              <FiArrowRight
+                class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
+              />
+            </Button>
+          </div>
+        </div>
+
+        <!-- Columna de Ilustración CSS (Tablero de Datos) -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div
+            class="w-full max-w-[520px] aspect-[4/3] rounded-[var(--radius-lg)] border border-border bg-white/60 backdrop-blur-md shadow-2xl p-6 relative overflow-hidden flex flex-col justify-between"
+          >
+            <!-- Top Bar de la Ilustración -->
+            <div
+              class="flex justify-between items-center border-b border-border pb-4 mb-4"
+            >
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                <span class="text-xs font-mono text-text-muted ml-2"
+                  >data_analysis_spss.dta</span
+                >
+              </div>
+              <div class="flex gap-2">
+                <span
+                  class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1"
+                >
+                  <FiDatabase class="w-3 h-3" /> Validado
+                </span>
+              </div>
+            </div>
+
+            <!-- Contenido Central: Gráfico de Barras Animado en CSS -->
+            <div class="flex-grow flex flex-col justify-end gap-6 mb-6">
+              <div
+                class="flex justify-around items-end h-32 px-4 border-b border-border/80 pb-2 relative"
+              >
+                <!-- Eje Y de guía sutil -->
+                <div
+                  class="absolute left-0 bottom-2 right-0 border-t border-dashed border-border/40"
+                >
+                </div>
+                <div
+                  class="absolute left-0 bottom-16 right-0 border-t border-dashed border-border/40"
+                >
+                </div>
+                <div
+                  class="absolute left-0 bottom-28 right-0 border-t border-dashed border-border/40"
+                >
+                </div>
+
+                <!-- Barra 1 -->
+                <div
+                  class="w-12 flex flex-col items-center gap-2 group/bar z-10"
+                >
+                  <div
+                    class="w-full bg-gradient-to-t from-primary/80 to-primary rounded-t-lg h-24 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-1_1.5s_ease-out_forwards]"
+                  >
+                  </div>
+                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                    >Muestra A</span
+                  >
+                </div>
+                <!-- Barra 2 -->
+                <div
+                  class="w-12 flex flex-col items-center gap-2 group/bar z-10"
+                >
+                  <div
+                    class="w-full bg-gradient-to-t from-accent/80 to-accent rounded-t-lg h-16 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-2_1.5s_ease-out_forwards]"
+                  >
+                  </div>
+                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                    >Muestra B</span
+                  >
+                </div>
+                <!-- Barra 3 -->
+                <div
+                  class="w-12 flex flex-col items-center gap-2 group/bar z-10"
+                >
+                  <div
+                    class="w-full bg-gradient-to-t from-emerald-400 to-success rounded-t-lg h-28 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-3_1.5s_ease-out_forwards]"
+                  >
+                  </div>
+                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                    >Muestra C</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer del Mockup: Botones de Descarga de Datos -->
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-border">
+              <span
+                class="text-xs font-bold text-text-main flex items-center gap-1.5 mr-2"
+                >Exportar:</span
+              >
+              <div
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+              >
+                <FiDownload class="w-3.5 h-3.5 text-primary" /> SPSS (.sav)
+              </div>
+              <div
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+              >
+                <FiDownload class="w-3.5 h-3.5 text-accent" /> Stata (.dta)
+              </div>
+              <div
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+              >
+                <FiDownload class="w-3.5 h-3.5 text-success" /> Excel (.xlsx)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 2: DOCENCIA Y TRABAJO DE CAMPO (Ilustración Izquierda, Texto Derecha) -->
+      <div
+        id="docencia"
+        class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 scroll-mt-28"
+      >
+        <!-- Columna de Ilustración CSS (Celular Offline + Sincronización) -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div
+            class="w-full max-w-[420px] aspect-[1/2] rounded-[3rem] border-8 border-bg-dark bg-white shadow-2xl p-6 relative overflow-hidden flex flex-col justify-between"
+          >
+            <!-- Notch del Teléfono -->
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-bg-dark rounded-b-2xl z-20 flex items-center justify-center"
+            >
+              <div class="w-12 h-1 bg-white/25 rounded-full mb-1"></div>
+            </div>
+
+            <!-- Cabecera de la Aplicación -->
+            <div
+              class="pt-4 flex justify-between items-center border-b border-border pb-4"
+            >
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-text-main font-display"
+                  >DataUMSA Collector</span
+                >
+                <span class="text-[10px] text-text-muted"
+                  >Proyecto: Práctica Geológica</span
+                >
+              </div>
+              <!-- Indicador Offline -->
+              <div
+                class="flex items-center gap-1 bg-amber-100 border border-amber-200 text-amber-800 px-2 py-0.5 rounded-full text-[9px] font-bold"
+              >
+                <FiWifiOff class="w-2.5 h-2.5" /> Offline
+              </div>
+            </div>
+
+            <!-- Cuerpo del Formulario de la App -->
+            <div
+              class="flex-grow py-4 flex flex-col gap-4 overflow-y-auto max-h-[320px]"
+            >
+              <!-- Campo 1 -->
+              <div class="flex flex-col gap-1">
+                <label
+                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  >1. Tipo de formación rocosa</label
+                >
+                <input
+                  type="text"
+                  value="Caliza con fósiles marinos"
+                  disabled
+                  class="w-full px-3 py-2 bg-bg-main border border-border rounded-lg text-xs font-medium text-text-main"
+                />
+              </div>
+              <!-- Campo 2 (GPS) -->
+              <div class="flex flex-col gap-1">
+                <label
+                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  >2. Coordenadas de Muestra</label
+                >
+                <div
+                  class="flex gap-2 items-center px-3 py-2 bg-primary/5 border border-primary/20 rounded-lg"
+                >
+                  <FiMapPin class="w-3.5 h-3.5 text-primary animate-bounce" />
+                  <span
+                    class="text-xs font-mono text-primary-dark font-semibold"
+                    >16.5001º S, 68.1500º W</span
+                  >
+                </div>
+              </div>
+              <!-- Campo 3 (Multimedia) -->
+              <div class="flex flex-col gap-1">
+                <label
+                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  >3. Registro Fotográfico</label
+                >
+                <div
+                  class="w-full h-24 rounded-lg bg-slate-100 border border-dashed border-border flex items-center justify-center relative overflow-hidden"
+                >
+                  <!-- Dibujo de cámara abstracto -->
+                  <div
+                    class="w-10 h-8 rounded bg-slate-300 border border-slate-400 flex items-center justify-center"
+                  >
+                    <div class="w-4 h-4 rounded-full bg-slate-100"></div>
+                  </div>
+                  <span
+                    class="absolute bottom-2 right-2 text-[9px] font-bold bg-black/60 text-white px-2 py-0.5 rounded"
+                    >imagen_1.jpg</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón de Sincronizar con efecto Pulse/Glow -->
+            <div class="pt-4 border-t border-border flex flex-col gap-2">
+              <div
+                class="w-full bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl py-3 px-4 flex items-center justify-between shadow-[0_4px_20px_rgba(41,185,242,0.3)] animate-pulse hover:animate-none cursor-pointer transition-shadow"
+              >
+                <span class="text-xs font-bold uppercase tracking-wider"
+                  >Sincronizar Datos</span
+                >
+                <FiRefreshCw
+                  class="w-4 h-4 animate-spin"
+                  style="animation-duration: 4s;"
+                />
+              </div>
+              <span class="text-[9px] text-center text-text-muted font-medium"
+                >3 registros listos para enviar al servidor</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de Texto -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-12 h-12 rounded-[var(--radius-md)] bg-success/10 border border-success/25 flex items-center justify-center text-success-dark"
+            >
+              <FiUsers class="w-6 h-6" strokeWidth={2} />
+            </div>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-success-dark font-mono"
+              >Caso de Uso 02</span
+            >
+          </div>
+
+          <h2
+            class="text-text-main font-display text-3xl md:text-4xl font-black leading-tight mb-6"
+          >
+            Docencia y Prácticas de Campo
+          </h2>
+
+          <div
+            class="text-text-muted font-sans text-base md:text-lg leading-relaxed space-y-6 mb-8"
+          >
+            <p>
+              La formación académica en carreras como Geografía, Agronomía,
+              Medicina Social, Ingeniería Civil y Arqueología requiere llevar el
+              aprendizaje fuera del aula. DataUMSA simplifica de manera drástica
+              el trabajo de campo de los estudiantes, estructurando la
+              recolección grupal y centralizando el control docente.
+            </p>
+            <p>
+              Los estudiantes no necesitan disponer de un plan de datos móviles
+              activo ni cobertura de red en el terreno. La app dedicada para
+              Android almacena de forma segura las respuestas en el dispositivo
+              encriptando la base de datos local. Una vez de vuelta en zonas
+              urbanas o en los campus de la universidad con red Wi-Fi, la
+              sincronización se realiza en segundos.
+            </p>
+
+            <!-- Puntos clave con Checks -->
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-success/15 text-success-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Captura Multimedia e Híbrida:** Fotos, grabaciones de
+                  audio, firmas digitales y GPS integrados.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-success/15 text-success-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Gestión Docente Dinámica:** Asignación de formularios por
+                  grupos de alumnos y visualización de avances.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Caja de Ejemplo Práctico -->
+          <div
+            class="bg-bg-main border border-border rounded-[var(--radius-md)] p-6 mb-8"
+          >
+            <span
+              class="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2 font-mono"
+              >Ejemplo Práctico en la UMSA</span
+            >
+            <p class="text-text-main text-sm font-medium leading-relaxed">
+              *Práctica de la Carrera de Geología:* Mapeo sísmico y de suelos en
+              las laderas de La Paz. Los estudiantes cargan el formulario
+              docente, realizan el recorrido tomando muestras fotográficas y
+              coordenadas del terreno. Al retornar al campus, sincronizan y el
+              docente visualiza la georreferenciación de las muestras tomadas
+              por todos los equipos sobre un mapa unificado.
+            </p>
+          </div>
+
+          <div>
+            <Button
+              href="/la-plataforma/comparativa"
+              variant="bento-secondary"
+              class="group/btn text-sm"
+            >
+              <span>Ver comparativa con otras herramientas</span>
+              <FiArrowRight
+                className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
+              />
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 3: PROYECTOS INSTITUCIONALES Y CENSOS (Texto Izquierda, Ilustración Derecha) -->
+      <div
+        id="censos"
+        class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 scroll-mt-28"
+      >
+        <!-- Columna de Texto -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-12 h-12 rounded-[var(--radius-md)] bg-accent/10 border border-accent/25 flex items-center justify-center text-accent-dark"
+            >
+              <FiClipboard className="w-6 h-6" strokeWidth={2} />
+            </div>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-accent-dark font-mono"
+              >Caso de Uso 03</span
+            >
+          </div>
+
+          <h2
+            class="text-text-main font-display text-3xl md:text-4xl font-black leading-tight mb-6"
+          >
+            Operativos Censales y Proyectos de Gran Escala
+          </h2>
+
+          <div
+            class="text-text-muted font-sans text-base md:text-lg leading-relaxed space-y-6 mb-8"
+          >
+            <p>
+              La planificación estratégica a nivel institucional requiere bases
+              de datos a gran escala que reflejen la realidad de miles de
+              personas de forma fidedigna. DataUMSA cuenta con una
+              infraestructura de servidores altamente optimizada, diseñada para
+              soportar cargas concurrentes extremas y operativos complejos de
+              distribución demográfica.
+            </p>
+            <p>
+              El sistema permite monitorizar los operativos mediante dashboards
+              interactivos de calidad de datos en tiempo real. Los supervisores
+              pueden visualizar la productividad de los encuestadores, la
+              duración media de los cuestionarios y auditar la geolocalización
+              de las entrevistas para asegurar la veracidad del censo.
+            </p>
+
+            <!-- Puntos clave con Checks -->
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-accent/15 text-accent-dark"
+                >
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Alta Concurrencia:** Soporte robusto de recepción de datos
+                  concurrentes sin caídas de servidor.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-accent/15 text-accent-dark"
+                >
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Auditoría y Control de Calidad:** Registro del tiempo por
+                  sección y de metadatos del dispositivo.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Caja de Ejemplo Práctico -->
+          <div
+            class="bg-bg-main border border-border rounded-[var(--radius-md)] p-6 mb-8"
+          >
+            <span
+              class="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2 font-mono"
+              >Ejemplo Práctico en la UMSA</span
+            >
+            <p class="text-text-main text-sm font-medium leading-relaxed">
+              *Censo Universitario de la UMSA:* Relevamiento socioeconómico y de
+              salud de más de 80,000 estudiantes activos. Equipos de 300
+              encuestadores distribuidos por todas las facultades cargaron las
+              bases de datos de forma paralela. Los coordinadores centralizados
+              monitorearon el mapa de avance en tiempo real para redirigir
+              brigadas a facultades con baja respuesta.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna de Ilustración CSS (Centro de Control / Dashboard Censo) -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div
+            class="w-full max-w-[520px] aspect-[4/3] rounded-[var(--radius-lg)] border border-border bg-white/60 backdrop-blur-md shadow-2xl p-6 relative overflow-hidden flex flex-col justify-between"
+          >
+            <!-- Top Bar con luces indicadoras de estado -->
+            <div
+              class="flex justify-between items-center border-b border-border pb-4 mb-4"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-text-main font-display"
+                  >Censo Universitario - Panel de Monitoreo</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"
+                ></span>
+                <span class="text-[10px] font-bold uppercase text-emerald-600"
+                  >Servidores Activos</span
+                >
+              </div>
+            </div>
+
+            <!-- Sección de KPIs con números simulados -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div
+                class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
+              >
+                <span
+                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  >Cuestionarios</span
+                >
+                <span
+                  class="text-lg md:text-xl font-black text-text-main font-mono"
+                  >82,149</span
+                >
+              </div>
+              <div
+                class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
+              >
+                <span
+                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  >Encuestadores</span
+                >
+                <span
+                  class="text-lg md:text-xl font-black text-primary-dark font-mono"
+                  >342</span
+                >
+              </div>
+              <div
+                class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
+              >
+                <span
+                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  >Eficacia</span
+                >
+                <span
+                  class="text-lg md:text-xl font-black text-success-dark font-mono"
+                  >99.8%</span
+                >
+              </div>
+            </div>
+
+            <!-- Gráfico de Línea del Censo (Rendimiento por Hora) -->
+            <div class="flex-grow flex flex-col justify-end relative">
+              <span
+                class="absolute left-0 top-0 text-[9px] font-bold text-text-muted flex items-center gap-1"
+              >
+                <FiTrendingUp className="text-primary" /> Tendencia de Carga (Sincronización/min)
+              </span>
+
+              <!-- SVG del gráfico simplificado con Tailwind -->
+              <div class="w-full h-24 flex items-end relative overflow-hidden">
+                <svg
+                  class="w-full h-full text-primary"
+                  viewBox="0 0 100 30"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 0 30 Q 15 25 25 15 T 50 10 T 75 5 T 100 2"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    class="animate-[draw-path_2s_ease-out_forwards]"></path>
+                  <path
+                    d="M 0 30 Q 15 25 25 15 T 50 10 T 75 5 T 100 2 L 100 30 L 0 30 Z"
+                    fill="url(#gradient-chart)"
+                    opacity="0.15"></path>
+                  <defs>
+                    <linearGradient
+                      id="gradient-chart"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop offset="0%" stopColor="var(--color-primary)"></stop>
+                      <stop offset="100%" stopColor="transparent"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <!-- Punto activo flotante -->
+                <div
+                  class="absolute right-[5%] top-[10%] w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_var(--color-primary)]"
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO 4: USO EXTERNO E INTEGRACIONES (Ilustración Izquierda, Texto Derecha) -->
+      <div
+        id="externos"
+        class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 scroll-mt-28"
+      >
+        <!-- Columna de Ilustración CSS (Terminal de Código API JSON) -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div
+            class="w-full max-w-[500px] aspect-[4/3] rounded-[var(--radius-lg)] bg-[#0d1117] border border-slate-800 shadow-2xl p-6 relative overflow-hidden flex flex-col"
+          >
+            <!-- Terminal Header -->
+            <div
+              class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4"
+            >
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                <span class="text-xs font-mono text-slate-400 ml-2"
+                  >bash - api_request.sh</span
+                >
+              </div>
+              <FiTerminal class="text-slate-500 w-4 h-4" />
+            </div>
+
+            <!-- Terminal Body (Código e JSON) -->
+            <div
+              class="flex-grow font-mono text-[11px] leading-relaxed text-slate-300 space-y-4 overflow-y-auto max-h-[220px]"
+            >
+              <!-- Query -->
+              <div>
+                <span class="text-purple-400">user@umsa:~$</span>
+                <span class="text-emerald-400">curl -X GET \</span>
+                <div class="pl-4 text-slate-400">
+                  -H <span class="text-blue-400"
+                    >"Authorization: Bearer token_68fa42"</span
+                  > \<br />
+                  https://api.data.umsa.bo/v1/projects
+                </div>
+              </div>
+
+              <!-- Response -->
+              <div class="border-t border-slate-800/60 pt-3">
+                <span class="text-slate-500">// Response 200 OK</span>
+                <pre
+                  class="text-slate-300 font-mono text-[10.5px] mt-1 whitespace-pre-wrap">
+<span class="text-yellow-300">&#123;</span>
+  <span class="text-pink-400">"status"</span>: <span class="text-emerald-400">"success"</span>,
+  <span class="text-pink-400">"data"</span>: <span class="text-yellow-300">[</span>
+    <span class="text-purple-300">&#123;</span>
+      <span class="text-pink-400">"id"</span>: <span class="text-amber-400">"proj_01_social"</span>,
+      <span class="text-pink-400">"title"</span>: <span class="text-emerald-400">"Acceso Agua El Alto"</span>,
+      <span class="text-pink-400">"records"</span>: <span class="text-amber-400">12450</span>,
+      <span class="text-pink-400">"sync_active"</span>: <span class="text-emerald-400">true</span>
+    <span class="text-purple-300">&#125;</span>
+  <span class="text-yellow-300">]</span>
+<span class="text-yellow-300">&#125;</span></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de Texto -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-12 h-12 rounded-[var(--radius-md)] bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-success-dark"
+            >
+              <FiGlobe className="w-6 h-6" strokeWidth={2} />
+            </div>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-success-dark font-mono"
+              >Caso de Uso 04</span
+            >
+          </div>
+
+          <h2
+            class="text-text-main font-display text-3xl md:text-4xl font-black leading-tight mb-6"
+          >
+            Investigación Externa, ONGs e Impacto Social
+          </h2>
+
+          <div
+            class="text-text-muted font-sans text-base md:text-lg leading-relaxed space-y-6 mb-8"
+          >
+            <p>
+              La vinculación de la universidad con el entorno social y
+              productivo es un pilar fundamental de la educación pública.
+              DataUMSA es una plataforma de acceso democrático y código abierto
+              que permite extender el uso de tecnología avanzada a
+              investigadores independientes, instituciones sin fines de lucro
+              (ONGs) y consultoras locales.
+            </p>
+            <p>
+              A través de nuestro sistema de **APIs seguras**, las
+              organizaciones pueden automatizar el flujo de datos. En lugar de
+              procesar manualmente la información al finalizar el proyecto, los
+              registros sincronizados en campo alimentan de forma inmediata
+              tableros de inteligencia de negocios como **Microsoft PowerBI o
+              Tableau**.
+            </p>
+
+            <!-- Puntos clave con Checks -->
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/15 text-success-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Integración vía API REST:** Conectores automatizados para
+                  ingesta de datos en plataformas externas.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/15 text-success-dark"
+                >
+                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                </div>
+                <span class="text-text-main text-sm font-medium"
+                  >**Open Data / Datos Abiertos:** Módulo para la publicación
+                  controlada y anonimizada de bases de datos.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Caja de Ejemplo Práctico -->
+          <div
+            class="bg-bg-main border border-border rounded-[var(--radius-md)] p-6 mb-8"
+          >
+            <span
+              class="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2 font-mono"
+              >Ejemplo Práctico en la UMSA</span
+            >
+            <p class="text-text-main text-sm font-medium leading-relaxed">
+              *Convenio Multidisciplinario:* Estudio de la calidad del agua en
+              distritos periurbanos de El Alto en conjunto con una ONG de
+              desarrollo internacional. Los encuestadores locales recolectaron
+              la información en campo, y de forma paralela los datos alimentaron
+              un tablero público en PowerBI que la alcaldía utilizó para
+              planificar obras de saneamiento básico de urgencia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Animaciones exclusivas para las ilustraciones CSS (Aporte @ui-ux-pro-max) */
+  @keyframes grow-bar-1 {
+    from {
+      height: 0;
+    }
+    to {
+      height: 6rem;
+    }
+  }
+  @keyframes grow-bar-2 {
+    from {
+      height: 0;
+    }
+    to {
+      height: 4rem;
+    }
+  }
+  @keyframes grow-bar-3 {
+    from {
+      height: 0;
+    }
+    to {
+      height: 7rem;
+    }
+  }
+  @keyframes draw-path {
+    from {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+  }
+</style>

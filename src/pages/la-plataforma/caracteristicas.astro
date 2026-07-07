@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Badge from '../../components/components-astro/Badge.astro';
+import TextReveal from '../../components/components-astro/TextReveal.astro';
+import { 
+    FiLayers, 
+    FiSmartphone, 
+    FiBarChart2, 
+    FiShield,
+    FiCheck
+} from "react-icons/fi";
+
+const features = [
+    {
+        title: "Diseño de Formularios",
+        subtitle: "Arquitectura de datos sin límites.",
+        icon: FiLayers,
+        theme: "accent",
+        items: [
+            "Lógica condicional avanzada",
+            "Grupos repetibles",
+            "Cálculos automáticos",
+            "Soporte multimedia",
+            "Preguntas georreferenciadas (GPS)"
+        ]
+    },
+    {
+        title: "Recolección Offline",
+        subtitle: "Trabajo fluido en cualquier terreno.",
+        icon: FiSmartphone,
+        theme: "success",
+        items: [
+            "App Android dedicada",
+            "Sincronización automática",
+            "Múltiples usuarios y roles"
+        ]
+    },
+    {
+        title: "Gestión y Análisis",
+        subtitle: "Data lista para la academia.",
+        icon: FiBarChart2,
+        theme: "primary",
+        items: [
+            "Dashboard en tiempo real",
+            "Reportes estadísticos",
+            "Exportación (Excel, SPSS, KML)",
+            "API para integraciones externas"
+        ]
+    },
+    {
+        title: "Seguridad y Soberanía",
+        subtitle: "Infraestructura bajo estricta normativa.",
+        icon: FiShield,
+        theme: "warning",
+        items: [
+            "Alojamiento en servidores UMSA",
+            "Control total de accesos",
+            "Cumplimiento de normativas"
+        ]
+    }
+];
+
+// Mapeo de clases de Tailwind v4 para evitar estilos inline
+const themeClasses = {
+  primary: {
+    text: "text-primary",
+    bgHover: "group-hover:bg-primary/5",
+    bgSolid: "bg-primary"
+  },
+  success: {
+    text: "text-success",
+    bgHover: "group-hover:bg-success/5",
+    bgSolid: "bg-success"
+  },
+  accent: {
+    text: "text-accent",
+    bgHover: "group-hover:bg-accent/5",
+    bgSolid: "bg-accent"
+  },
+  warning: {
+    text: "text-warning",
+    bgHover: "group-hover:bg-warning/5",
+    bgSolid: "bg-warning"
+  }
+};
+---
+
+<Layout title="Características" description="Descubre las características de DataUMSA.">
+
+<section class="w-full py-24 md:py-32 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-10">
+        
+        <!-- Left: Sticky Sidebar (Se queda fijo al hacer scroll) -->
+        <div class="lg:w-5/12 lg:sticky lg:top-32 h-fit mb-8 lg:mb-0">
+            <Badge variant="primary" class="mb-6">
+                Características
+            </Badge>
+            
+            <h2 class="text-text-main font-display text-4xl md:text-5xl lg:text-[4rem] font-black leading-[1.05] mb-6">
+                Herramientas avanzadas para <br class="hidden lg:block"/>
+                <TextReveal variant="light">investigación real.</TextReveal>
+            </h2>
+            
+            <p class="text-text-muted font-sans text-lg md:text-xl font-medium">
+                Diseñado para operar en las condiciones más exigentes. DataUMSA te da el control total de tus datos, desde la recolección en campo sin internet hasta el análisis estadístico avanzado.
+            </p>
+        </div>
+
+        <!-- Right: Stack Vertical de Features -->
+        <div class="lg:w-7/12 flex flex-col gap-8">
+            {features.map((feat) => {
+                const Icon = feat.icon;
+                const colors = themeClasses[feat.theme] || themeClasses.primary;
+                return (
+                    <article class="glass-panel group relative overflow-hidden p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-start">
+                        
+                        <!-- Overlay sutil de color en hover -->
+                        <div class={`absolute inset-0 opacity-0 group-hover:opacity-100 ${colors.bgHover} transition-opacity duration-500 pointer-events-none`}></div>
+
+                        <!-- Icono a la izquierda -->
+                        <div class="flex-shrink-0 relative z-10">
+                            <div class={`w-16 h-16 rounded-[var(--radius-md)] flex items-center justify-center shadow-sm border border-border bg-bg-main ${colors.text} group-hover:-translate-y-2 transition-transform duration-500`}>
+                                <Icon class="w-8 h-8" strokeWidth={2.5} />
+                            </div>
+                        </div>
+
+                        <!-- Contenido principal -->
+                        <div class="relative z-10 w-full">
+                            <h3 class="text-text-main font-display text-2xl font-bold mb-2">
+                                {feat.title}
+                            </h3>
+                            <p class="text-text-muted text-base md:text-lg mb-8">
+                                {feat.subtitle}
+                            </p>
+
+                            <!-- Lista dividida en 2 columnas para no desperdiciar espacio -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                                {feat.items.map((item) => (
+                                    <div class="flex items-start gap-3">
+                                        <div class={`mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center shadow-sm ${colors.bgSolid}`}>
+                                            <FiCheck class="w-3 h-3 text-white" strokeWidth={3} />
+                                        </div>
+                                        <span class="text-text-main font-medium text-sm leading-tight opacity-90">
+                                            {item}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </article>
+                );
+            })}
+        </div>
+
+    </div>
+</section>
+
+</Layout>

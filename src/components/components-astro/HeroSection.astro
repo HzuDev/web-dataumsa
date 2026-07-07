@@ -1,0 +1,262 @@
+---
+// Componente Hero Bento Grid para DataUMSA
+import Button from "./Button.astro";
+import Badge from "./Badge.astro";
+import TextReveal from "./TextReveal.astro";
+---
+
+<div
+    class="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 animate-fade-in py-10"
+>
+    {/* Tarjeta Principal (2x2) */}
+    <div
+        class="lg:col-span-2 lg:row-span-2 bg-bg-dark-surface rounded-[2.5rem] p-8 lg:p-12 relative overflow-hidden flex flex-col justify-between group bento-card shadow-lg border border-border-dark hover:border-primary/30 hover:shadow-[0_25px_50px_-12px_rgba(41,185,242,0.25)]"
+    >
+        {/* Fondo de grilla estilo ingeniería/datos dibujado con CSS */}
+        <div
+            class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity"
+            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"
+        >
+        </div>
+
+        <div
+            class="absolute -right-20 -top-20 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 group-hover:opacity-40 transition-opacity animate-float"
+        >
+        </div>
+
+        <div class="relative z-10 space-y-8">
+            <Badge variant="dark" dotColor="bg-primary">
+                Plataforma oficial de recolección UMSA
+            </Badge>
+
+            <div class="space-y-4">
+                <h1
+                    class="text-5xl lg:text-6xl font-black tracking-tight text-white leading-none"
+                >
+                    <TextReveal variant="light">DataUMSA</TextReveal>
+                </h1>
+                <h2
+                    class="text-2xl lg:text-3xl font-bold leading-tight text-text-inverse/90"
+                >
+                    Investigación y <TextReveal variant="light">recolección de datos</TextReveal> avanzada.
+                </h2>
+            </div>
+
+            <p class="text-lg text-text-dark-muted leading-relaxed max-w-md">
+                Herramientas profesionales, soberanía total de tu información y
+                trabajo <span class="font-bold text-white">100% offline</span>.
+                Diseñada por y para la comunidad.
+            </p>
+        </div>
+
+        <div class="relative z-10 flex flex-col sm:flex-row gap-3 mt-10">
+            <Button href="/registro" variant="bento-primary">
+                Crear cuenta gratis
+            </Button>
+            <Button href="/docs" variant="bento-secondary">
+                Explorar documentación
+            </Button>
+        </div>
+    </div>
+
+    {/* Tarjeta 1: Formularios - Ilustración CSS de un Formulario */}
+    <div
+        class="bg-primary-light/40 backdrop-blur-md rounded-[2rem] p-6 flex flex-col justify-between bento-card transition-all duration-500 border border-primary/10 hover:border-primary/30 hover:shadow-[0_20px_40px_-15px_rgba(41,185,242,0.15)] relative overflow-hidden group"
+    >
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+        </div>
+        <span
+            class="text-[10px] font-black uppercase tracking-widest text-primary-dark mb-4 block relative z-10"
+            >Capacidades del Sistema</span
+        >
+
+        {/* CSS Asset: Formulario Complejo */}
+        <div
+            class="w-16 h-16 mb-6 relative z-10 bento-icon transition-transform duration-500 group-hover:scale-110"
+        >
+            <div
+                class="absolute inset-0 bg-primary/10 rounded-xl border border-primary/20 p-2.5 flex flex-col gap-2 shadow-inner"
+            >
+                <div class="w-3/4 h-1.5 bg-primary/40 rounded-full"></div>
+                <div class="w-full h-1.5 bg-primary/20 rounded-full"></div>
+                <div class="flex gap-2 items-center mt-1">
+                    <div
+                        class="w-3 h-3 rounded bg-primary flex items-center justify-center"
+                    >
+                        {/* Checkmark con CSS */}
+                        <div
+                            class="w-1.5 h-2.5 border-b-2 border-r-2 border-white transform rotate-45 -mt-0.5"
+                        >
+                        </div>
+                    </div>
+                    <div class="w-1/2 h-1.5 bg-primary/30 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10">
+            <h4 class="text-lg font-bold text-text-main mb-1">
+                Formularios complejos
+            </h4>
+            <p class="text-sm font-medium text-text-muted">
+                Lógica avanzada y saltos condicionales
+            </p>
+        </div>
+    </div>
+
+    {/* Tarjeta 2: Android App - Ilustración CSS de un Smartphone */}
+    <div
+        class="bg-success-light/40 backdrop-blur-md rounded-[2rem] p-6 flex flex-col justify-between bento-card transition-all duration-500 border border-success/15 hover:border-success/35 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)] relative overflow-hidden group"
+    >
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-success/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+        </div>
+        <div
+            class="self-end inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-success-light/90 border border-success/20 mb-2 relative z-10"
+        >
+            <span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"
+            ></span>
+            <span
+                class="text-success-dark text-[10px] font-bold uppercase tracking-wider"
+                >Sistema Activo</span
+            >
+        </div>
+
+        {/* CSS Asset: App Offline */}
+        <div class="w-16 h-16 mb-4 relative z-10 animate-float bento-icon">
+            <div
+                class="absolute left-2 top-0 w-12 h-16 border-[3px] border-success/30 rounded-[14px] bg-success/5 p-1 flex flex-col items-center"
+            >
+                <div class="w-4 h-1 bg-success/30 rounded-full mb-1"></div>
+                {/* Notch */}
+                <div
+                    class="w-full flex-1 bg-success/10 rounded-sm overflow-hidden flex flex-col gap-1 p-1"
+                >
+                    <div class="w-full h-2 bg-success/20 rounded-sm"></div>
+                    <div class="w-full h-2 bg-success/20 rounded-sm"></div>
+                </div>
+                <div
+                    class="absolute -right-2 top-4 w-4 h-4 bg-success rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(16,185,129,0.4)]"
+                >
+                    {/* Wifi tachado simplificado para representar offline */}
+                    <div class="w-2 h-0.5 bg-white rotate-45 absolute"></div>
+                    <div class="w-2 h-0.5 bg-white -rotate-45 absolute"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10">
+            <h4 class="text-lg font-bold text-text-main mb-1">
+                App Android dedicada
+            </h4>
+            <p class="text-sm font-medium text-text-muted">
+                Operación 100% offline garantizada
+            </p>
+        </div>
+    </div>
+
+    {/* Tarjeta 3: Análisis - Ilustración CSS de un Gráfico de Barras */}
+    <div
+        class="bg-warning-light/40 backdrop-blur-md rounded-[2rem] p-6 flex flex-col justify-between bento-card transition-all duration-500 border border-warning/15 hover:border-warning/35 hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.15)] relative overflow-hidden group"
+    >
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-warning/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+        </div>
+
+        {/* CSS Asset: Gráfico de barras ascendente */}
+        <div
+            class="w-16 h-16 mb-6 relative z-10 bento-icon flex items-end gap-1.5 pb-2 border-b-2 border-warning/20"
+        >
+            <div
+                class="w-3.5 h-4 bg-warning/30 rounded-t-sm group-hover:h-6 transition-all duration-300"
+            >
+            </div>
+            <div
+                class="w-3.5 h-8 bg-warning/60 rounded-t-sm group-hover:h-10 transition-all duration-300 delay-75"
+            >
+            </div>
+            <div
+                class="w-3.5 h-12 bg-warning rounded-t-sm group-hover:h-14 transition-all duration-300 delay-150 shadow-[0_0_10px_rgba(245,158,11,0.3)]"
+            >
+            </div>
+        </div>
+
+        <div class="relative z-10">
+            <h4 class="text-lg font-bold text-text-main mb-1">
+                Análisis profesional
+            </h4>
+            <p class="text-sm font-medium text-text-muted">
+                Exportación directa a formatos estándar
+            </p>
+        </div>
+    </div>
+
+    {/* Tarjeta 4: Soberanía - Ilustración CSS de un Nodo de Seguridad */}
+    <div
+        class="bg-accent-light/40 backdrop-blur-md rounded-[2rem] p-6 flex flex-col justify-between bento-card transition-all duration-500 border border-accent/15 hover:border-accent/35 hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.15)] relative overflow-hidden group"
+    >
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+        </div>
+
+        {/* CSS Asset: Escudo / Nodo de Datos Geométrico */}
+        <div
+            class="w-16 h-16 mb-6 relative z-10 flex items-center justify-center bento-icon"
+        >
+            <div
+                class="absolute inset-2 border-2 border-accent/20 rounded-xl rotate-45 group-hover:rotate-90 transition-transform duration-700"
+            >
+            </div>
+            <div
+                class="absolute inset-3 bg-accent/10 border border-accent/40 rounded-lg -rotate-12 group-hover:rotate-0 transition-transform duration-500"
+            >
+            </div>
+            <div
+                class="w-5 h-5 bg-accent rounded-sm rotate-45 shadow-[0_0_15px_rgba(139,92,246,0.5)] flex items-center justify-center"
+            >
+                <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="relative z-10">
+            <h4 class="text-lg font-bold text-text-main mb-1">
+                Soberanía de datos
+            </h4>
+            <p class="text-sm font-medium text-text-muted">
+                Control total por parte de la universidad
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .bento-card {
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .bento-card:hover {
+        transform: translateY(-4px);
+    }
+</style>

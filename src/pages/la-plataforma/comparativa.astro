@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Badge from '../../components/components-astro/Badge.astro';
+import TextReveal from '../../components/components-astro/TextReveal.astro';
+import { 
+    FiShield, 
+    FiWifiOff, 
+    FiLayers, 
+    FiPieChart, 
+    FiDollarSign, 
+    FiAward,
+    FiX,
+    FiMinus,
+    FiCheck
+} from "react-icons/fi";
+
+const features = [
+    {
+        aspect: "Privacidad y propiedad",
+        icon: FiShield,
+        google: { text: "Tus datos se venden", state: "danger" },
+        umsa: { text: "100% bajo control UMSA", state: "success" }
+    },
+    {
+        aspect: "Trabajo en campo",
+        icon: FiWifiOff,
+        google: { text: "No disponible", state: "danger" },
+        umsa: { text: "App nativa dedicada", state: "success" }
+    },
+    {
+        aspect: "Lógica de formularios",
+        icon: FiLayers,
+        google: { text: "Básico", state: "danger" },
+        umsa: { text: "Avanzado (XLSForm)", state: "success" }
+    },
+    {
+        aspect: "Análisis de datos",
+        icon: FiPieChart,
+        google: { text: "Limitado", state: "danger" },
+        umsa: { text: "Dashboard profesional", state: "success" }
+    },
+    {
+        aspect: "Costo de uso",
+        icon: FiDollarSign,
+        google: { text: "Gratis con límites", state: "warning" },
+        umsa: { text: "Gratis (Comunidad)", state: "success" }
+    },
+    {
+        aspect: "Soporte académico",
+        icon: FiAward,
+        google: { text: "Comercial", state: "danger" },
+        umsa: { text: "Orientado a universidad", state: "success" }
+    }
+];
+
+// Mapeo de estados a clases de Tailwind v4
+const stateClasses: Record<string, string> = {
+  danger: "text-danger-dark",
+  warning: "text-warning-dark",
+  success: "text-success-dark"
+};
+---
+
+<Layout title="Comparativa | DataUMSA" description="Explora las ventajas de DataUMSA frente a otras alternativas.">
+
+<section class="w-full py-24 md:py-32 relative overflow-hidden flex flex-col items-center">
+    
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        <!-- Hero Section Minimalista -->
+        <div class="flex flex-col items-center text-center mb-16">
+            <Badge variant="primary" class="mb-6">
+                No es lo mismo
+            </Badge>
+            <h1 class="text-text-main font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
+                Comparativa clara:<br />
+                <TextReveal variant="light">DataUMSA vs. Google</TextReveal>
+            </h1>
+            <p class="text-text-muted font-sans text-lg md:text-xl max-w-2xl font-medium">
+                Diseñado exclusivamente para la investigación académica. Conoce por qué somos la mejor alternativa para tu facultad.
+            </p>
+        </div>
+
+        <!-- Panel Contenedor Principal (Glassmorphism) -->
+        <div class="glass-panel w-full p-2 md:p-8 overflow-hidden relative">
+            
+            <!-- Encabezados de la Tabla -->
+            <div class="grid grid-cols-12 gap-4 items-end px-4 mb-6 border-b border-border pb-6">
+                <div class="col-span-5 md:col-span-4 text-xs font-bold uppercase tracking-widest text-text-muted">
+                    Característica
+                </div>
+                <div class="col-span-3 md:col-span-4 text-center font-bold text-sm md:text-base opacity-60 text-text-main font-display">
+                    Google Forms
+                </div>
+                
+                <!-- Cabecera DataUMSA con Asset CSS Minimalista -->
+                <div class="col-span-4 md:col-span-4 flex flex-col items-center justify-center">
+                    <div class="relative flex items-center justify-center w-8 h-8 mb-2">
+                        <div class="absolute inset-0 rounded-full bg-primary/20 animate-ping" style="animation-duration: 3s;"></div>
+                        <div class="relative w-3 h-3 rounded-full bg-primary-dark shadow-[0_0_10px_rgba(41,185,242,0.6)]"></div>
+                    </div>
+                    <span class="text-lg md:text-2xl font-black text-primary-dark font-display">
+                        DataUMSA
+                    </span>
+                </div>
+            </div>
+
+            <!-- Filas de Comparación -->
+            <div class="flex flex-col">
+                {features.map((item, index) => {
+                    const Icon = item.icon;
+                    const isLast = index === features.length - 1;
+                    const googleColor = stateClasses[item.google.state] || "text-text-muted";
+                    return (
+                        <div class={`grid grid-cols-12 gap-4 items-center px-4 py-5 transition-colors hover:bg-bg-main ${!isLast ? 'border-b border-border' : ''} group`}>
+                            
+                            <!-- Aspecto Evaluado -->
+                            <div class="col-span-5 md:col-span-4 flex items-center gap-3 md:gap-4">
+                                <div class="hidden md:flex p-2.5 rounded-[var(--radius-md)] bg-bg-surface text-text-muted group-hover:text-primary shadow-sm transition-colors border border-border">
+                                    <Icon className="w-5 h-5" strokeWidth={2} />
+                                </div>
+                                <span class="text-text-main font-bold text-sm md:text-[1.05rem] leading-tight">
+                                    {item.aspect}
+                                </span>
+                            </div>
+
+                            <!-- Celda Google Forms -->
+                            <div class="col-span-3 md:col-span-4 flex justify-center">
+                                <div class={`flex flex-col md:flex-row items-center justify-center gap-1.5 text-xs md:text-sm font-medium text-center ${googleColor}`}>
+                                    {item.google.state === 'danger' && <FiX className="w-4 h-4 opacity-70" strokeWidth={3} />}
+                                    {item.google.state === 'warning' && <FiMinus className="w-4 h-4 opacity-70" strokeWidth={3} />}
+                                    <span class="opacity-80">{item.google.text}</span>
+                                </div>
+                            </div>
+
+                            <!-- Celda DataUMSA Destacada -->
+                            <div class="col-span-4 md:col-span-4 flex justify-center relative">
+                                <!-- Fondo sutil para la columna ganadora (Estandarizado a var(--radius-md)) -->
+                                <div class="absolute inset-y-[-1rem] inset-x-0 bg-primary/5 rounded-[var(--radius-md)] -z-10 group-hover:bg-primary/10 transition-colors"></div>
+                                
+                                <div class="flex flex-col md:flex-row items-center justify-center gap-1.5 text-xs md:text-[0.95rem] font-bold text-center text-success-dark">
+                                    <FiCheck className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" strokeWidth={4} />
+                                    <span>{item.umsa.text}</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    );
+                })}
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+</Layout>

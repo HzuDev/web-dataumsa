@@ -1,0 +1,36 @@
+---
+title: Documentación de DataUMSA
+description: Guías, referencias y tutoriales para el uso de la plataforma de recolección y análisis de datos de la UMSA.
+template: splash
+hero:
+  tagline: Diseña formularios avanzados con XLSForm, recolecta datos offline con DataUMSA Collect y analiza resultados en tiempo real con soberanía tecnológica.
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: Guía de Inicio Rápido
+      link: /docs/guides/inicio-rapido/
+      icon: right-arrow
+    - text: Referencia de XLSForm
+      link: /docs/reference/xlsform/
+      icon: open-book
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Áreas de la Plataforma
+
+<CardGrid stagger>
+	<Card title="Diseño de Formularios" icon="pencil">
+		Crea cuestionarios avanzados usando el estándar **XLSForm**. Soporta lógicas condicionales de salto, restricciones de rango y validaciones de consistencia.
+	</Card>
+	<Card title="DataUMSA Collect" icon="mobile">
+		Configura y utiliza la aplicación móvil oficial para Android. Captura coordenadas GPS, fotos y firmas digitales al 100% sin conexión a internet.
+	</Card>
+	<Card title="Gestión de Operativos" icon="setting">
+		Administra encuestadores en campo, realiza el control de calidad en tiempo real y gestiona permisos de acceso y roles institucionales.
+	</Card>
+	<Card title="Análisis y Exportación" icon="document">
+		Visualiza reportes automáticos en la web o exporta las bases de datos limpias directamente a formatos profesionales como **SPSS**, **Stata** o **Excel**.
+	</Card>
+</CardGrid>

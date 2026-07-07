@@ -1,0 +1,22 @@
+---
+import HeroSection from "../components/components-astro/HeroSection.astro";
+import HitoSection from "../components/components-astro/HitoSection.astro";
+import WhySection from "../components/components-astro/WhySection.astro";
+import ComparativeSection from "../components/components-astro/ComparativeSection.astro";
+import Layout from "../layouts/Layout.astro";
+import UseCaseSection from "../components/components-astro/UseCaseSection.astro";
+import CTA from "../components/components-astro/CTA.astro";
+---
+
+<Layout
+  title="Inicio"
+  description="DataUMSA - Plataforma moderna y robusta para la recolección, análisis y gestión de datos académicos y de investigación."
+>
+  <HeroSection />
+  <div class="w-full border-t border-border/60 my-6"></div>
+  <HitoSection />
+  <WhySection />
+  <ComparativeSection />
+  <UseCaseSection />
+  <CTA />
+</Layout>

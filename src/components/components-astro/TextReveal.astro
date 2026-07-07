@@ -1,0 +1,16 @@
+---
+interface Props {
+  variant?: 'light' | 'dark';
+  class?: string;
+  delay?: string;
+}
+
+const { variant = 'dark', class: className = '', delay } = Astro.props;
+
+const variantClass = variant === 'light' ? 'text-reveal-light' : 'text-reveal-dark';
+const style = delay ? `animation-delay: ${delay};` : '';
+---
+
+<span class={`${variantClass} ${className}`} style={style}>
+  <slot />
+</span>

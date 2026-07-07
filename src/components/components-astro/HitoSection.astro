@@ -1,0 +1,268 @@
+---
+// Componente HitoSection - Estilo Timeline Conectado para DataUMSA
+import Badge from "./Badge.astro";
+import TextReveal from "./TextReveal.astro";
+---
+
+<section
+  class="w-full bg-bg-dark rounded-[2.5rem] py-20 px-6 sm:px-12 relative overflow-hidden border border-border-dark shadow-2xl my-16"
+>
+  {/* Fondo ambiental sutil para conectar con el Hero */}
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none -z-10"
+  >
+  </div>
+
+  <div class="max-w-7xl w-full mx-auto relative z-10">
+    <!-- ========================================== -->
+    <!-- 1. HEADER CENTRAL -->
+    <!-- ========================================== -->
+    <div class="text-center max-w-3xl mx-auto mb-20 relative z-10">
+      <Badge variant="glass" dotColor="bg-emerald-400" class="mb-6 inline-flex">
+        Hito Alcanzado
+      </Badge>
+      <h2
+        class="text-4xl lg:text-5xl lg:text-[3.5rem] font-black text-white leading-[1.1] tracking-tight mb-6"
+      >
+        Nuestro primer <br class="hidden sm:block" />
+        <TextReveal variant="light">gran desafío</TextReveal>
+        superado.
+      </h2>
+      <p class="text-lg text-text-dark-muted font-medium max-w-xl mx-auto">
+        El Censo Universitario demostró la madurez de nuestra infraestructura.
+      </p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. TIMELINE DE HITOS -->
+    <!-- ========================================== -->
+    <div class="relative z-10 mt-12">
+      {/* Línea conectora horizontal */}
+      <div
+        class="hidden lg:block absolute top-12 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -z-10"
+      >
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative"
+      >
+        <!-- HITO 1: PIONERO -->
+        <div class="flex flex-col items-center text-center group">
+          <div
+            class="w-24 h-24 rounded-2xl bg-bg-surface/50 backdrop-blur-sm border border-border-dark flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_-10px_rgba(41,185,242,0.3)] transition-all duration-500 relative animate-float-slow"
+          >
+            <div
+              class="absolute inset-0 bg-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+            </div>
+
+            <div class="relative w-7 h-9 flex z-10">
+              <div
+                class="w-[3px] h-full bg-text-dark-muted group-hover:bg-primary transition-colors rounded-full"
+              >
+              </div>
+              <div
+                class="w-5 h-5 bg-text-dark-muted/20 group-hover:bg-primary/20 border-y-2 border-r-2 border-text-dark-muted group-hover:border-primary rounded-r-md mt-1 transition-colors"
+              >
+              </div>
+            </div>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">Pionero</h3>
+          <p class="text-sm text-text-dark-muted leading-relaxed">
+            Primer censo digital a gran escala de la UMSA
+          </p>
+        </div>
+
+        <!-- HITO 2: ESCALABLE -->
+        <div class="flex flex-col items-center text-center group lg:mt-8">
+          <div
+            class="w-24 h-24 rounded-2xl bg-bg-surface/50 backdrop-blur-sm border border-border-dark flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_-10px_rgba(41,185,242,0.3)] transition-all duration-500 relative animate-float-slow animation-delay-200"
+          >
+            <div
+              class="absolute inset-0 bg-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+            </div>
+
+            <div
+              class="flex items-end gap-1.5 h-8 relative z-10 chart-container"
+            >
+              <div
+                class="w-2 bg-text-dark-muted/40 group-hover:bg-primary/40 rounded-t-sm transition-all duration-300 bar-step-1"
+              >
+              </div>
+              <div
+                class="w-2 bg-text-dark-muted/70 group-hover:bg-primary/70 rounded-t-sm transition-all duration-300 bar-step-2"
+              >
+              </div>
+              <div
+                class="w-2 bg-text-dark-muted group-hover:bg-primary rounded-t-sm transition-all duration-300 shadow-[0_0_10px_rgba(41,185,242,0)] group-hover:shadow-[0_0_10px_rgba(41,185,242,0.5)] bar-step-3"
+              >
+              </div>
+            </div>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">Escalable</h3>
+          <p class="text-sm text-text-dark-muted leading-relaxed">
+            Demostró capacidad para miles de respuestas simultáneas
+          </p>
+        </div>
+
+        <!-- HITO 3: CONFIABLE -->
+        <div class="flex flex-col items-center text-center group">
+          <div
+            class="w-24 h-24 rounded-2xl bg-bg-surface/50 backdrop-blur-sm border border-border-dark flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:border-success/50 group-hover:shadow-[0_0_30px_-10px_rgba(16,185,129,0.3)] transition-all duration-500 relative animate-float-slow animation-delay-400"
+          >
+            <div
+              class="absolute inset-0 bg-success/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+            </div>
+
+            <div
+              class="relative w-8 h-8 rounded-full border-[2.5px] border-text-dark-muted group-hover:border-success flex items-center justify-center transition-colors z-10 animate-pulse-border"
+            >
+              <div
+                class="w-2.5 h-4 border-b-[2.5px] border-r-[2.5px] border-text-dark-muted group-hover:border-success transform rotate-45 -mt-1 transition-colors"
+              >
+              </div>
+              <div
+                class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-success opacity-0 group-hover:opacity-100 animate-ping"
+              >
+              </div>
+            </div>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">Confiable</h3>
+          <p class="text-sm text-text-dark-muted leading-relaxed">
+            Funcionamiento robusto en condiciones reales
+          </p>
+        </div>
+
+        <!-- HITO 4: SOBERANO (Destacado) -->
+        <div class="flex flex-col items-center text-center group lg:mt-8">
+          <div
+            class="w-24 h-24 rounded-2xl bg-primary-dark/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:border-primary group-hover:bg-primary-dark/40 group-hover:shadow-[0_0_40px_-5px_rgba(41,185,242,0.4)] transition-all duration-500 relative overflow-hidden animate-float-slow animation-delay-600"
+          >
+            <div
+              class="absolute inset-0 opacity-20 pointer-events-none"
+              style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 8px 8px;"
+            >
+            </div>
+
+            <div
+              class="relative w-7 h-9 flex flex-col items-center justify-end z-10"
+            >
+              <div
+                class="w-4 h-4 border-[2.5px] border-white/70 rounded-t-full mb-[-2px] group-hover:translate-y-[-2px] transition-transform"
+              >
+              </div>
+              <div
+                class="w-full h-5 bg-white/90 rounded-[4px] shadow-[0_0_15px_rgba(255,255,255,0.3)] flex items-center justify-center"
+              >
+                <div
+                  class="w-1.5 h-1.5 bg-primary-dark rounded-full animate-pulse"
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">Soberano</h3>
+          <p class="text-sm text-text-dark-muted leading-relaxed">
+            Todos los datos bajo el control total de la universidad
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animaciones escalonadas para el gráfico de barras al HOVER y al INICIO */
+  .bar-step-1 {
+    height: 20%;
+  }
+  .bar-step-2 {
+    height: 30%;
+  }
+  .bar-step-3 {
+    height: 40%;
+  }
+
+  /* La clase trigger-chart-anim se añadirá con JS al hacer scroll */
+  .group:hover .bar-step-1,
+  .trigger-chart-anim .bar-step-1 {
+    animation: grow-bar-1 0.4s ease-out forwards;
+  }
+  .group:hover .bar-step-2,
+  .trigger-chart-anim .bar-step-2 {
+    animation: grow-bar-2 0.5s ease-out forwards;
+  }
+  .group:hover .bar-step-3,
+  .trigger-chart-anim .bar-step-3 {
+    animation: grow-bar-3 0.6s ease-out forwards;
+  }
+
+  @keyframes grow-bar-1 {
+    0% {
+      height: 20%;
+    }
+    100% {
+      height: 40%;
+    }
+  }
+  @keyframes grow-bar-2 {
+    0% {
+      height: 30%;
+    }
+    100% {
+      height: 70%;
+    }
+  }
+  @keyframes grow-bar-3 {
+    0% {
+      height: 40%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  /* Animaciones continuas (Vida en los assets) */
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-pulse-border {
+    animation: pulseBorder 3s infinite;
+  }
+
+  @keyframes pulseBorder {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.05);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+</style>
