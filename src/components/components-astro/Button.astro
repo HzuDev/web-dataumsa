@@ -20,8 +20,8 @@ const {
   ...rest
 } = Astro.props;
 
-// Clases base para alineación y comportamiento
-const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-300 font-sans cursor-pointer focus:outline-none select-none decoration-none";
+// Clases base para alineación y comportamiento con foco accesible para navegación por teclado
+const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-300 font-sans cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none select-none decoration-none";
 
 // Mapeo de variantes con sus respectivas clases de Tailwind v4 / global.css tokens
 const variantStyles = {

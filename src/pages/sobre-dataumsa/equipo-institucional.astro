@@ -4,67 +4,61 @@ import Badge from '../../components/components-astro/Badge.astro';
 import Button from '../../components/components-astro/Button.astro';
 import TextReveal from '../../components/components-astro/TextReveal.astro';
 import { 
-    FiUsers, 
     FiShield, 
     FiServer, 
     FiLock, 
-    FiCpu, 
     FiDatabase, 
-    FiCheck,
-    FiGitBranch,
-    FiAward,
-    FiBookOpen,
-    FiSmartphone
+    FiAward, 
+    FiBookOpen, 
+    FiSmartphone,
+    FiGithub,
+    FiSettings,
+    FiTerminal,
+    FiFileText
 } from "react-icons/fi";
 
 const team = [
     {
-        name: "Juan Carlos Mendoza",
-        role: "Desarrollo Técnico y Backend",
-        specialty: "Go / API REST",
-        initials: "JM",
-        gradient: "from-blue-500 to-indigo-600",
-        shadow: "hover:shadow-blue-500/10 hover:border-blue-500/30"
+        name: "Kevin C. Barrientos Carrasco",
+        role: "Impulsor y Organizador del Proyecto DataUMSA",
+        specialty: "Gestión y Coordinación General",
+        initials: "KB",
+        github: "https://github.com"
     },
     {
-        name: "María José Ramírez",
-        role: "Diseño de Formularios y Análisis",
-        specialty: "XLSForm / R",
-        initials: "MR",
-        gradient: "from-purple-500 to-pink-600",
-        shadow: "hover:shadow-purple-500/10 hover:border-purple-500/30"
+        name: "Fabian J. Escalera Caballero",
+        role: "Coordinación Técnica de la Plataforma DataUMSA",
+        specialty: "Gestión de Datos y Administración de Servicios",
+        initials: "FE",
+        github: "https://github.com/Flerian-EC"
     },
     {
-        name: "Diego Alejandro Flores",
-        role: "Desarrollo de Aplicación Móvil",
-        specialty: "Android / Kotlin",
-        initials: "DF",
-        gradient: "from-emerald-500 to-teal-600",
-        shadow: "hover:shadow-emerald-500/10 hover:border-emerald-500/30"
+        name: "Andres H. Chirinos Lizondo",
+        role: "Responsable de Infraestructura y Despliegue del DataUMSA",
+        specialty: "Infraestructura y Despliegue de Contenedores",
+        initials: "AC",
+        github: "https://github.com/andres-chirinos"
     },
     {
-        name: "Laura Valentina Suárez",
-        role: "Gestión de Proyectos y Docs",
-        specialty: "Agile / Scrum",
-        initials: "LS",
-        gradient: "from-amber-500 to-orange-600",
-        shadow: "hover:shadow-amber-500/10 hover:border-amber-500/30"
+        name: "Ricardo R. Cuenca Nava",
+        role: "Responsable de UI/UX de la plataforma DataUMSA y Aplicación Móvil DataUMSA Collect",
+        specialty: "Diseño, UI/UX y Desarrollo Móvil",
+        initials: "RC",
+        github: "https://github.com/HzuDev"
     },
     {
-        name: "Andrés Felipe Vargas",
-        role: "Infraestructura y Seguridad",
-        specialty: "Docker / Linux",
-        initials: "AV",
-        gradient: "from-red-500 to-rose-600",
-        shadow: "hover:shadow-red-500/10 hover:border-red-500/30"
+        name: "Adhemar S. Gutierrez Zabaleta",
+        role: "Responsable de Documentación y Soporte de Aplicación Móvil",
+        specialty: "Documentación y Soporte",
+        initials: "AG",
+        github: "https://github.com/S4uL2001"
     },
     {
-        name: "Camila Fernanda López",
-        role: "Soporte Académico y Relaciones",
-        specialty: "Relaciones UMSA",
-        initials: "CL",
-        gradient: "from-sky-500 to-blue-600",
-        shadow: "hover:shadow-sky-500/10 hover:border-sky-500/30"
+        name: "Erwin E. Mendoza Mamani",
+        role: "Encargado de Seguridad en Infraestructura y Aplicaciones",
+        specialty: "Seguridad y Ciberseguridad",
+        initials: "EM",
+        github: "https://github.com/erwinmendoza915"
     }
 ];
 
@@ -73,178 +67,209 @@ const values = [
         title: "Servidores Propios",
         desc: "Datos alojados exclusivamente en la infraestructura informática de la universidad.",
         icon: FiServer,
-        color: "text-blue-500",
-        bg: "bg-blue-500/10"
+        color: "text-primary-dark",
+        bg: "bg-slate-100"
     },
     {
         title: "Altos Estándares",
         desc: "Seguridad avanzada y estándares técnicos para proteger la confidencialidad de la información.",
         icon: FiLock,
-        color: "text-purple-500",
-        bg: "bg-purple-500/10"
+        color: "text-primary-dark",
+        bg: "bg-slate-100"
     },
     {
         title: "Sin Fines Comerciales",
         desc: "Garantía absoluta de que los datos no serán comercializados ni utilizados por terceros.",
         icon: FiShield,
-        color: "text-emerald-500",
-        bg: "bg-emerald-500/10"
+        color: "text-primary-dark",
+        bg: "bg-slate-100"
     },
     {
         title: "Soberanía Informática",
         desc: "Compromiso con la soberanía informática y la generación de conocimiento científico en la UMSA.",
         icon: FiBookOpen,
-        color: "text-amber-500",
-        bg: "bg-amber-500/10"
+        color: "text-primary-dark",
+        bg: "bg-slate-100"
     }
 ];
 ---
 
-<Layout title="Equipo e Institucional | DataUMSA" description="Conoce al equipo de estudiantes de Estadística e Informática y el proceso de institucionalización de DataUMSA ante el Consejo Universitario.">
+<Layout title="Equipo e Institucional" description="Conoce al equipo de estudiantes de Estadística e Informática y el proceso de institucionalización de DataUMSA ante el Consejo Universitario.">
 
-<!-- Hero Section (Equipo e Institución) -->
-<section class="w-full py-20 md:py-32 relative overflow-hidden flex items-center justify-center">
-    <!-- Luces de fondo -->
-    <div class="absolute top-1/4 left-1/3 w-[600px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow"></div>
-
+<!-- Hero Section -->
+<section class="w-full py-20 md:py-32 relative overflow-hidden flex items-center justify-center bg-glow-container">
     <div class="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
         
         <!-- Texto de Introducción -->
         <div class="lg:col-span-7 flex flex-col justify-center">
-            <Badge variant="primary" class="mb-6 self-start">
-                Talento UMSA
-            </Badge>
+            <span class="badge self-start">Talento UMSA</span>
             <h1 class="text-text-main font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6">
-                Equipo e <TextReveal variant="light">Institucional</TextReveal>
+                Equipo e <span class="text-reveal-light">Institucional</span>
             </h1>
             <p class="text-text-muted font-sans text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-medium">
-                El motor técnico y la visión institucional detrás del desarrollo de la plataforma, liderada por estudiantes de Estadística e Informática de la UMSA.
+                El núcleo técnico y la visión institucional detrás de la implementación, despliegue y adaptación de la plataforma, liderada por estudiantes de la UMSA.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <Button href="#equipo" variant="bento-primary" class="text-sm">
+                <Button href="#equipo" variant="bento-primary" class="btn btn-primary text-sm">
                     <span>Ver el Equipo</span>
                 </Button>
-                <Button href="#institucional" variant="bento-secondary" class="text-sm">
+                <Button href="#institucional" variant="bento-secondary" class="btn btn-secondary text-sm">
                     <span>Ver Valores Institucionales</span>
                 </Button>
             </div>
         </div>
         
-        <!-- Ilustración CSS: Mapa Mental de Roles -->
-        <div class="lg:col-span-5 flex items-center justify-center relative min-h-[350px]">
-            <div class="w-72 h-72 relative flex items-center justify-center">
-                <!-- Nodo Central -->
-                <div class="w-24 h-24 rounded-full bg-slate-900 border border-white/5 flex flex-col items-center justify-center text-white shadow-2xl z-20">
-                    <FiDatabase className="w-6 h-6 text-primary animate-pulse" />
-                    <span class="text-[8px] font-bold font-mono mt-1">DataUMSA</span>
+        <!-- Ilustración CSS: Mapa Mental de Roles Estables con Flotación Suave -->
+        <div class="lg:col-span-5 flex items-center justify-center relative min-h-[450px] w-full max-w-[500px] mx-auto">
+            {/* Anillos orbitales concéntricos */}
+            <div class="absolute w-44 h-44 rounded-full border border-dashed border-slate-200/50 dark:border-white/5 pointer-events-none"></div>
+            <div class="absolute w-72 h-72 lg:w-80 lg:h-80 rounded-full border border-dashed border-slate-200/80 dark:border-white/10 pointer-events-none"></div>
+            <div class="absolute w-[360px] h-[360px] lg:w-[400px] lg:h-[400px] rounded-full border border-dashed border-slate-100/40 dark:border-white/5 pointer-events-none hidden sm:block"></div>
+
+            <div class="w-80 h-80 lg:w-96 lg:h-96 relative flex items-center justify-center">
+                <!-- Nodo Central con anillo de pulso -->
+                <div class="absolute w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-primary/10 animate-pulse-ring z-10 pointer-events-none"></div>
+                <div class="w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-slate-900 border border-white/10 flex flex-col items-center justify-center text-white shadow-2xl z-20 hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
+                    <FiDatabase className="w-7 h-7 lg:w-8 lg:h-8 text-primary animate-pulse" />
+                    <span class="text-xs font-bold font-mono mt-1.5 tracking-widest text-primary-light">DataUMSA</span>
                 </div>
                 
-                <!-- Nodos Alrededor y líneas conectoras -->
-                <div class="absolute w-full h-full flex items-center justify-center animate-spin-slow">
-                    <!-- Nodo 1: Backend -->
-                    <div class="absolute w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-sm -translate-y-24">
-                        <FiServer className="w-5 h-5 text-blue-500" />
-                    </div>
-                    <!-- Nodo 2: Móvil -->
-                    <div class="absolute w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-sm translate-y-24">
-                        <FiSmartphone className="w-5 h-5 text-emerald-500" />
-                    </div>
-                    <!-- Nodo 3: Datos -->
-                    <div class="absolute w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-sm -translate-x-24">
-                        <FiGitBranch className="w-5 h-5 text-purple-500" />
-                    </div>
-                    <!-- Nodo 4: Seguridad -->
-                    <div class="absolute w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-sm translate-x-24">
-                        <FiShield className="w-5 h-5 text-red-500" />
+                <!-- Nodos Alrededor Estáticos con Flotación Suave (Legibilidad de 100%) -->
+                
+                <!-- Nodo 1: DevOps (Arriba) -->
+                <div class="absolute -top-10 lg:-top-12 left-1/2 -translate-x-1/2 z-20">
+                    <div class="animate-float-slow flex flex-col items-center gap-2">
+                        <div class="w-14 h-14 rounded-full bg-white border border-border flex items-center justify-center shadow-md hover:border-primary/40 hover:shadow-lg transition-all duration-300 group cursor-pointer bg-slate-50">
+                            <FiSettings className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors duration-300" />
+                        </div>
+                        <span class="text-xs font-bold text-text-muted tracking-wider uppercase bg-slate-100/90 px-2.5 py-0.5 rounded-full border border-border/50 shadow-sm">DevOps</span>
                     </div>
                 </div>
+                
+                <!-- Nodo 2: Móvil (Abajo) -->
+                <div class="absolute -bottom-10 lg:-bottom-12 left-1/2 -translate-x-1/2 z-20">
+                    <div class="animate-float-slow flex flex-col items-center gap-2" style="animation-delay: -1.5s;">
+                        <div class="w-14 h-14 rounded-full bg-white border border-border flex items-center justify-center shadow-md hover:border-primary/40 hover:shadow-lg transition-all duration-300 group cursor-pointer bg-slate-50">
+                            <FiSmartphone className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors duration-300" />
+                        </div>
+                        <span class="text-xs font-bold text-text-muted tracking-wider uppercase bg-slate-100/90 px-2.5 py-0.5 rounded-full border border-border/50 shadow-sm">Móvil</span>
+                    </div>
+                </div>
+                
+                <!-- Nodo 3: Arquitectura (Izquierda) -->
+                <div class="absolute -left-10 lg:-left-12 top-1/2 -translate-y-1/2 z-20">
+                    <div class="animate-float-slow flex flex-col items-center gap-2" style="animation-delay: -0.7s;">
+                        <div class="w-14 h-14 rounded-full bg-white border border-border flex items-center justify-center shadow-md hover:border-primary/40 hover:shadow-lg transition-all duration-300 group cursor-pointer bg-slate-50">
+                            <FiTerminal className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors duration-300" />
+                        </div>
+                        <span class="text-xs font-bold text-text-muted tracking-wider uppercase bg-slate-100/90 px-2.5 py-0.5 rounded-full border border-border/50 shadow-sm">Arquitectura</span>
+                    </div>
+                </div>
+                
+                <!-- Nodo 4: Documentos (Derecha) -->
+                <div class="absolute -right-10 lg:-right-12 top-1/2 -translate-y-1/2 z-20">
+                    <div class="animate-float-slow flex flex-col items-center gap-2" style="animation-delay: -2.2s;">
+                        <div class="w-14 h-14 rounded-full bg-white border border-border flex items-center justify-center shadow-md hover:border-primary/40 hover:shadow-lg transition-all duration-300 group cursor-pointer bg-slate-50">
+                            <FiFileText className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors duration-300" />
+                        </div>
+                        <span class="text-xs font-bold text-text-muted tracking-wider uppercase bg-slate-100/90 px-2.5 py-0.5 rounded-full border border-border/50 shadow-sm">Documentos</span>
+                    </div>
+                </div>
+
             </div>
         </div>
         
     </div>
 </section>
 
-<!-- Sección del Equipo (Fichas Interactivas) -->
+<!-- Sección del Equipo -->
 <section id="equipo" class="w-full py-24 bg-slate-50/75 border-y border-border relative overflow-hidden flex flex-col items-center">
     <div class="max-w-6xl w-full mx-auto px-6 relative z-10">
         
-        <!-- Encabezado de la sección -->
+        <!-- Encabezado -->
         <div class="text-center max-w-2xl mx-auto mb-20">
-            <Badge variant="primary" class="mb-4">
-                Estadística e Informática
-            </Badge>
+            <span class="badge">Estadística e Informática</span>
             <h2 class="text-text-main font-display text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-                El equipo <TextReveal variant="light">impulsor</TextReveal>
+                El equipo <span class="text-reveal-light">impulsor</span>
             </h2>
             <p class="text-text-muted font-sans text-base md:text-lg mt-4">
                 Estudiantes comprometidos con la soberanía tecnológica y el rigor científico de la universidad.
             </p>
         </div>
         
-        <!-- Grid del Equipo -->
+        <!-- Grid de Integrantes -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
-                <div class={`glass-panel p-8 flex flex-col items-center text-center border border-border transition-all duration-300 ${member.shadow} group`}>
-                    <!-- Avatar con iniciales y degradado -->
-                    <div class={`w-20 h-20 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white font-display font-black text-2xl shadow-md mb-6 transform group-hover:scale-105 transition-transform`}>
+                <div class="glass-panel p-8 flex flex-col items-center text-center group">
+                    <!-- Avatar Minimalista -->
+                    <div class="w-16 h-16 rounded-full bg-slate-100 border border-border flex items-center justify-center text-text-main font-display font-bold text-xl mb-5 group-hover:bg-primary-light group-hover:border-primary/30 transition-colors duration-300">
                         {member.initials}
                     </div>
                     
-                    <h3 class="text-text-main font-display text-lg font-bold mb-1 group-hover:text-primary-dark transition-colors">
+                    <h3 class="text-text-main font-display text-base font-bold mb-1 tracking-tight">
                         {member.name}
                     </h3>
-                    <span class="text-xs font-semibold text-primary-dark mb-4 uppercase tracking-wider">
+                    <span class="text-xs font-semibold text-primary-dark mb-4 min-h-[32px] flex items-center justify-center">
                         {member.role}
                     </span>
                     
-                    <Badge variant="primary" class="text-[10px] mt-auto">
-                        {member.specialty}
-                    </Badge>
+                    <div class="w-full pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-mono font-medium text-text-muted bg-slate-100 px-2.5 py-1 rounded">
+                            {member.specialty}
+                        </span>
+                        <a 
+                            href={member.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="text-text-muted hover:text-text-main p-1.5 transition-colors duration-200"
+                            aria-label={`Ver perfil de GitHub de ${member.name}`}
+                        >
+                            <FiGithub className="w-4 h-4" />
+                        </a>
+                    </div>
                 </div>
             ))}
         </div>
     </div>
 </section>
 
-<!-- Sección Institucional & Bento Grid de Valores -->
+<!-- Sección Institucional -->
 <section id="institucional" class="w-full py-24 relative overflow-hidden flex flex-col items-center">
     <div class="max-w-6xl w-full mx-auto px-6 relative z-10">
         
-        <!-- Encabezado de la sección -->
+        <!-- Encabezado Institucional -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
             <div class="lg:col-span-8 flex flex-col">
-                <Badge variant="primary" class="mb-4 self-start">
-                    Institucionalización
-                </Badge>
+                <span class="badge self-start">Institucionalización</span>
                 <h2 class="text-text-main font-display text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-4">
-                    Hacia la plataforma <TextReveal variant="light">oficial</TextReveal> de la UMSA
+                    Hacia la plataforma <span class="text-reveal-light">oficial</span> de la UMSA
                 </h2>
                 <p class="text-text-muted font-sans text-base md:text-lg leading-relaxed">
-                    DataUMSA inició su recorrido con aprobación a nivel de carrera y actualmente se encuentra en **proceso de institucionalización ante el Consejo Universitario de la UMSA**. El objetivo es consolidar la plataforma como el software oficial de la Universidad Mayor de San Andrés, disponible tanto para investigadores, docentes y estudiantes de la casa de estudios como para entidades aliadas.
+                    DataUMSA inició su recorrido con aprobación a nivel de carrera y actualmente se encuentra en <strong class="text-text-main font-bold">proceso de institucionalización ante el Consejo Universitario de la UMSA</strong>. El objetivo es consolidar el entorno tecnológico adaptado como la suite de software oficial de la Universidad Mayor de San Andrés, disponible tanto para investigadores, docentes y estudiantes de la casa de estudios como para entidades aliadas.
                 </p>
             </div>
             <div class="lg:col-span-4 flex items-center justify-center">
-                <!-- Sello de aprobación CSS -->
-                <div class="w-32 h-32 rounded-full border-4 border-dashed border-primary/20 flex flex-col items-center justify-center relative">
-                    <FiAward className="w-12 h-12 text-primary animate-bounce" />
-                    <span class="text-[8px] font-bold text-primary-dark font-mono mt-1 uppercase tracking-wider">Consejo UMSA</span>
+                <!-- Sello de aprobación -->
+                <div class="w-32 h-32 rounded-full border-2 border-dashed border-border flex flex-col items-center justify-center relative bg-white/50 backdrop-blur-sm shadow-sm">
+                    <FiAward className="w-10 h-10 text-primary-dark" />
+                    <span class="text-xs font-bold text-text-muted font-mono mt-2 uppercase tracking-widest text-center px-2">Consejo UMSA</span>
                 </div>
             </div>
         </div>
 
-        <!-- Bento Grid de Valores Institucionales -->
+        <!-- Bento Grid de Valores -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {values.map((val) => {
                 const Icon = val.icon;
                 return (
-                    <div class="glass-panel p-8 flex gap-6 border border-border hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-                        <!-- Icono con fondo opaco -->
-                        <div class={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm border border-border/40 bg-white ${val.color} ${val.bg} group-hover:-translate-y-1 transition-transform duration-300`}>
+                    <div class="glass-panel p-8 flex gap-6 group">
+                        <!-- Icono Fijo Minimalista -->
+                        <div class={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 border border-border bg-white ${val.color} group-hover:border-primary/20 transition-colors duration-300`}>
                             <Icon className="w-5 h-5" strokeWidth={2} />
                         </div>
                         
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-text-main font-display text-lg font-bold">
+                        <div class="flex flex-col gap-1.5">
+                            <h3 class="text-text-main font-display text-base font-bold">
                                 {val.title}
                             </h3>
                             <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
@@ -262,22 +287,34 @@ const values = [
 </Layout>
 
 <style>
-    /* Animaciones personalizadas */
-    .animate-pulse-slow {
-        animation: pulse-glow 8s ease-in-out infinite alternate;
+    .animate-pulse-ring {
+        animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }
-    .animate-spin-slow {
-        animation: spin 24s linear infinite;
+    .animate-float-slow {
+        animation: float-slow 4s ease-in-out infinite;
     }
 
-    @keyframes pulse-glow {
+    @keyframes float-slow {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    @keyframes pulse-ring {
         0% {
-            opacity: 0.3;
-            transform: scale(0.95);
+            transform: scale(0.85);
+            opacity: 0.8;
+        }
+        50% {
+            transform: scale(1.1);
+            opacity: 0.4;
         }
         100% {
-            opacity: 0.7;
-            transform: scale(1.05);
+            transform: scale(1.3);
+            opacity: 0;
         }
     }
 </style>

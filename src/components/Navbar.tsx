@@ -103,8 +103,9 @@ const RoundedDrawerNav = ({
         <>
             <nav
                 onMouseLeave={() => setHovered(null)}
-                className={`sticky top-0 z-50 px-6 py-4 border-b border-border transition-colors duration-300 ${(hovered || mobileNavOpen) ? "bg-primary-light" : "bg-white"
-                    }`}
+                className={`sticky top-0 z-50 px-6 py-4 border-b border-border transition-colors duration-300 ${
+                    mobileNavOpen ? "bg-white" : "bg-white/95 backdrop-blur-md"
+                }`}
             >
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -115,14 +116,19 @@ const RoundedDrawerNav = ({
                         />
                     </div>
                     <a
-                        href="/acceder"
-                        className="hidden md:block btn btn-primary text-center decoration-none"
+                        href="https://app-dataumsa.sociest.org/accounts/login/"
+                        target="_blank"
+                        className="hidden md:flex btn btn-primary text-center decoration-none"
                     >
-                        <span className="font-bold">Acceder - </span> a la plataforma
+                        <span className="font-bold">Acceder a la plataforma</span>
+                        <FiExternalLink className="w-4 h-4 ml-1" />
                     </a>
                     <button
                         onClick={() => setMobileNavOpen((pv) => !pv)}
-                        className="block text-2xl text-text-main md:hidden border-none bg-transparent cursor-pointer"
+                        aria-label="Abrir menú de navegación"
+                        aria-expanded={mobileNavOpen}
+                        aria-controls="mobile-navigation"
+                        className="block text-2xl text-text-main md:hidden border-none bg-transparent cursor-pointer p-2 rounded-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
                     >
                         <FiMenu />
                     </button>
@@ -133,9 +139,11 @@ const RoundedDrawerNav = ({
 
                 <MobileLinks links={links} open={mobileNavOpen} />
             </nav>
-            <motion.main layout className={`${navBackground} px-2 pb-2 grow flex flex-col`}>
-                <div className={`${bodyBackground} rounded-3xl w-full grow flex flex-col`}>{children}</div>
-            </motion.main>
+            {children && (
+                <div className={`${navBackground} px-2 pb-2 grow flex flex-col`}>
+                    <div className={`${bodyBackground} rounded-3xl w-full grow flex flex-col`}>{children}</div>
+                </div>
+            )}
         </>
     );
 };
@@ -146,6 +154,8 @@ const Logo = () => {
             <img
                 src="/logo_dataumsa.png"
                 alt="Logo DataUMSA"
+                width={160}
+                height={32}
                 className="h-8 w-auto object-contain transition-transform duration-200 hover:scale-[1.02]"
             />
         </a>
@@ -163,10 +173,10 @@ const DesktopLinks = ({
         <div className="ml-9 hidden md:block">
             <div className="flex gap-6 items-center">
                 {links.map((l) => (
-                    <TopLink 
-                        key={l.title} 
-                        setHovered={setHovered} 
-                        title={l.title} 
+                    <TopLink
+                        key={l.title}
+                        setHovered={setHovered}
+                        title={l.title}
                         href={l.href}
                         target={l.target}
                         isExternal={l.isExternal}
@@ -207,14 +217,15 @@ const DesktopSubmenu = ({
                             duration: 0.2,
                             ease: "easeInOut"
                         }}
-                        className="space-y-4 py-6 pl-[190px] overflow-hidden"
+                        className="py-3 px-6 mt-3 rounded-2xl bg-slate-50/90 border border-border/80 shadow-xs overflow-hidden flex flex-wrap items-center gap-6"
                     >
                         {activeSublinks.map((l) => (
                             <a
-                                className="block text-2xl font-semibold text-text-main transition-colors hover:text-primary-dark no-underline font-display"
+                                className="inline-flex items-center gap-2 text-base font-semibold text-text-main transition-colors hover:text-primary-dark no-underline font-display py-1.5 px-3 rounded-lg hover:bg-white"
                                 href={l.href}
                                 key={l.title}
                             >
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                                 {l.title}
                             </a>
                         ))}
@@ -239,6 +250,7 @@ const MobileLinks = ({ links, open }: { links: LinkType[]; open: boolean }) => {
                     exit={{
                         opacity: 0,
                     }}
+                    id="mobile-navigation"
                     className="grid grid-cols-2 gap-6 py-6 md:hidden"
                 >
                     {links.map((l) => {

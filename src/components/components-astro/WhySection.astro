@@ -2,6 +2,7 @@
 // Componente WhySection (¿Por qué elegir DataUMSA?)
 // Rediseñado como banda inmersiva Full-Width (Edge-to-Edge)
 import TextReveal from "./TextReveal.astro";
+import { FiShield } from "react-icons/fi";
 ---
 
 <section
@@ -42,39 +43,24 @@ import TextReveal from "./TextReveal.astro";
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative">
             <!-- ================= COLUMNA IZQUIERDA ================= -->
             <div class="flex flex-col gap-8 lg:gap-12">
-                <!-- CARD 1: SOBERANÍA (Accent) -->
+                <!-- CARD 1: SOBERANÍA -->
                 <div
-                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-accent/40 hover:shadow-[0_20px_50px_-15px_rgba(139,92,246,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
+                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 hover:shadow-[0_20px_50px_-15px_rgba(6,136,186,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
                 >
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     >
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(139,92,246,0.2)] transition-all duration-500 relative"
+                            class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(41,185,242,0.2)] transition-all duration-500 relative"
                         >
                             <div
-                                class="absolute inset-0 bg-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+                                class="absolute inset-0 bg-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
                             >
                             </div>
-                            <div
-                                class="relative w-8 h-9 flex flex-col items-center z-10"
-                            >
-                                <div
-                                    class="w-5 h-4 border-t-2 border-x-2 border-accent/70 rounded-t-full mb-[-2px] group-hover:translate-y-[-3px] transition-transform duration-300"
-                                >
-                                </div>
-                                <div
-                                    class="w-full h-6 border-2 border-accent rounded-b-lg rounded-t-sm flex items-center justify-center bg-white shadow-[0_0_10px_rgba(139,92,246,0.1)]"
-                                >
-                                    <div
-                                        class="w-1.5 h-1.5 bg-accent rounded-full group-hover:scale-150 group-hover:shadow-[0_0_8px_rgba(139,92,246,0.8)] transition-all"
-                                    >
-                                    </div>
-                                </div>
-                            </div>
+                            <FiShield className="w-8 h-8 text-primary-dark relative z-10 transition-transform duration-300 group-hover:scale-110" />
                         </div>
 
                         <h3
@@ -91,31 +77,31 @@ import TextReveal from "./TextReveal.astro";
                     </div>
                 </div>
 
-                <!-- CARD 3: OFFLINE (Success) -->
+                <!-- CARD 3: OFFLINE -->
                 <div
-                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-success/40 hover:shadow-[0_20px_50px_-15px_rgba(16,185,129,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
+                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 hover:shadow-[0_20px_50px_-15px_rgba(6,136,186,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
                 >
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-success/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     >
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 rounded-2xl bg-success/10 border border-success/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.2)] transition-all duration-500 relative"
+                            class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(41,185,242,0.2)] transition-all duration-500 relative"
                         >
                             <div
-                                class="relative w-7 h-10 border-2 border-success rounded-lg flex flex-col items-center justify-between py-1 bg-white group-hover:rotate-6 group-hover:scale-105 transition-transform duration-300 z-10"
+                                class="relative w-7 h-10 border-2 border-primary-dark rounded-lg flex flex-col items-center justify-between py-1 bg-white group-hover:rotate-6 group-hover:scale-105 transition-transform duration-300 z-10"
                             >
                                 <div
-                                    class="w-2 h-0.5 bg-success/60 rounded-full"
+                                    class="w-2 h-0.5 bg-primary-dark/60 rounded-full"
                                 >
                                 </div>
                                 <div
-                                    class="w-3 h-3 rounded-full border-2 border-dashed border-success/40 group-hover:border-solid group-hover:border-success animate-[spin_4s_linear_infinite] group-hover:animate-ping transition-all"
+                                    class="w-3 h-3 rounded-full border-2 border-dashed border-primary/40 group-hover:border-solid group-hover:border-primary-dark animate-[spin_4s_linear_infinite] group-hover:animate-ping transition-all"
                                 >
                                 </div>
-                                <div class="w-3 h-0.5 bg-success rounded-full">
+                                <div class="w-3 h-0.5 bg-primary-dark rounded-full">
                                 </div>
                             </div>
                         </div>
@@ -137,7 +123,7 @@ import TextReveal from "./TextReveal.astro";
 
             <!-- ================= COLUMNA DERECHA ================= -->
             <div class="flex flex-col gap-8 lg:gap-12 md:mt-24">
-                <!-- CARD 2: HERRAMIENTAS (Primary) -->
+                <!-- CARD 2: HERRAMIENTAS -->
                 <div
                     class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 hover:shadow-[0_20px_50px_-15px_rgba(41,185,242,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
                 >
@@ -188,40 +174,40 @@ import TextReveal from "./TextReveal.astro";
                     </div>
                 </div>
 
-                <!-- CARD 4: ANÁLISIS (Warning) -->
+                <!-- CARD 4: ANÁLISIS -->
                 <div
-                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-warning/40 hover:shadow-[0_20px_50px_-15px_rgba(245,158,11,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
+                    class="group relative bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 hover:shadow-[0_20px_50px_-15px_rgba(6,136,186,0.15)] rounded-[2rem] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:-translate-y-2"
                 >
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-warning/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     >
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 rounded-2xl bg-warning/10 border border-warning/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.2)] transition-all duration-500 relative"
+                            class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:shadow-[0_0_30px_-5px_rgba(41,185,242,0.2)] transition-all duration-500 relative"
                         >
                             <div
                                 class="relative w-9 h-8 flex items-end gap-1 z-10 group-hover:scale-105 transition-transform duration-300"
                             >
                                 <div
-                                    class="absolute -left-1 -bottom-1 w-10 h-0.5 bg-warning/30 rounded-full"
+                                    class="absolute -left-1 -bottom-1 w-10 h-0.5 bg-primary/30 rounded-full"
                                 >
                                 </div>
                                 <div
-                                    class="absolute -left-1 -bottom-1 w-0.5 h-9 bg-warning/30 rounded-full"
+                                    class="absolute -left-1 -bottom-1 w-0.5 h-9 bg-primary/30 rounded-full"
                                 >
                                 </div>
                                 <div
-                                    class="w-2 bg-warning/40 rounded-t-[2px] h-3 group-hover:h-5 transition-all duration-300"
+                                    class="w-2 bg-primary/40 rounded-t-[2px] h-3 group-hover:h-5 transition-all duration-300"
                                 >
                                 </div>
                                 <div
-                                    class="w-2 bg-warning/70 rounded-t-[2px] h-5 group-hover:h-7 transition-all duration-300 delay-75"
+                                    class="w-2 bg-primary/70 rounded-t-[2px] h-5 group-hover:h-7 transition-all duration-300 delay-75"
                                 >
                                 </div>
                                 <div
-                                    class="w-2 bg-warning rounded-t-[2px] h-7 group-hover:h-9 transition-all duration-300 delay-150"
+                                    class="w-2 bg-primary-dark rounded-t-[2px] h-7 group-hover:h-9 transition-all duration-300 delay-150"
                                 >
                                 </div>
                             </div>

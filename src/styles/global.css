@@ -1,5 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/Montserrat,Plus_Jakarta_Sans/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/Montserrat,Plus_Jakarta_Sans/Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
 
 @theme {
   /* Color Palette - DataUMSA Brand */
@@ -45,9 +76,20 @@
   --color-accent-dark: #6d28d9;
   
   /* Font Families */
-  --font-sans: 'Google Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Google Sans', system-ui, -apple-system, sans-serif;
   --font-display: 'Montserrat', var(--font-sans);
   --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Font Sizes for Legibility & Accessibility */
+  --font-size-xs: 0.875rem;       /* 14px instead of 12px (accessible minimum) */
+  --font-size-sm: 0.9375rem;      /* 15px instead of 14px */
+  --font-size-base: 1.0625rem;    /* 17px instead of 16px (legible body text) */
+  --font-size-lg: 1.25rem;        /* 20px instead of 18px */
+  --font-size-xl: 1.4375rem;      /* 23px instead of 20px */
+  --font-size-2xl: 1.75rem;       /* 28px instead of 24px */
+  --font-size-3xl: 2.125rem;      /* 34px instead of 30px */
+  --font-size-4xl: 2.75rem;       /* 44px instead of 36px */
+  --font-size-5xl: 3.5rem;        /* 56px instead of 48px */
   
   /* Layout & Animation */
   --radius-sm: 8px;
@@ -98,11 +140,12 @@
     background-image: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
     color: var(--color-text-main);
     font-family: var(--font-sans);
+    font-size: var(--font-size-base);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -115,9 +158,14 @@
     color: var(--color-text-main);
   }
 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
+  h1 { font-size: var(--font-size-4xl); }
+  h2 { font-size: var(--font-size-2xl); }
+  h3 { font-size: var(--font-size-xl); }
+
+  ::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+  }
 
   a {
     color: var(--color-primary-dark);
@@ -197,7 +245,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.75rem;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   font-weight: 600;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -214,7 +262,7 @@
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px 0 rgba(41, 185, 242, 0.4);
-    background: linear-gradient(135deg, #3ec4f7 0%, #089cd4 100%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 85%, white) 0%, var(--color-primary-dark) 100%);
     color: var(--color-text-inverse);
   }
 }
@@ -241,14 +289,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-@utility title-gradient {
-  background: linear-gradient(to right, #0f172a, #0369a1, var(--color-primary-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 
 @utility text-reveal-dark {
   position: relative;
@@ -291,5 +331,30 @@
     width: 0%; /* Empieza invisible */
     animation: var(--animate-reveal-bg);
     animation-delay: 0.2s; 
+  }
+}
+
+/* Accessibility: Intentional alternative for prefers-reduced-motion preserving state hierarchy */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-iteration-count: 1 !important;
+    animation-duration: 0.01s !important;
+  }
+
+  .animate-float,
+  .animate-pulse,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+
+  .text-reveal-dark::before,
+  .text-reveal-light::before {
+    animation: none !important;
+    width: 100% !important;
+  }
+
+  :root {
+    --transition-fast: 0.05s ease;
+    --transition-smooth: 0.05s ease;
   }
 }

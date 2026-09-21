@@ -1,0 +1,169 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Políticas de Privacidad"
+  description="Políticas de privacidad, anonimato técnico absoluto y protección de datos de la plataforma DataUMSA."
+>
+  <div
+    class="w-full relative py-20 px-6 md:px-8 overflow-hidden bg-glow-container min-h-screen"
+  >
+    {/* Fondo decorativo sutil con los tokens de acento */}
+    <div
+      class="absolute -left-40 top-20 w-[500px] h-[500px] bg-primary/5 rounded-full filter blur-3xl opacity-60 pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute -right-40 bottom-20 w-[400px] h-[400px] bg-accent/5 rounded-full filter blur-3xl opacity-40 pointer-events-none"
+    >
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      {/* Cabecera de la página */}
+      <div class="mb-12 text-center md:text-left">
+        <h1
+          class="text-4xl md:text-5xl font-black tracking-tight text-text-main leading-tight mb-4"
+        >
+          Políticas de Privacidad y Tratamiento de Información
+        </h1>
+        <p class="text-text-muted dark:text-text-dark-muted text-lg">
+          Última actualización: 12 de julio de 2026. Esta política describe
+          nuestro compromiso con el anonimato absoluto, la seguridad de la
+          infraestructura y la apertura de la plataforma DataUMSA.
+        </p>
+      </div>
+
+      {/* Contenedor con fondo adaptativo sólido y alto contraste */}
+      <div
+        class="bg-white dark:bg-bg-dark-surface rounded-[2.5rem] p-8 md:p-12 border border-border/60 dark:border-border-dark shadow-xl space-y-10"
+      >
+        <section class="space-y-4">
+          <h2
+            class="text-2xl font-bold text-text-main dark:text-white flex items-center gap-3"
+          >
+            <span
+              class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-sm font-bold"
+              >1</span
+            >
+            Anonimato Técnico Absoluto y Cero Telemetría
+          </h2>
+          <p class="text-text-muted dark:text-text-dark-muted leading-relaxed">
+            DataUMSA ha sido diseñada bajo el principio de <strong
+              class="text-text-main dark:text-white"
+              >privacidad por defecto</strong
+            >. A diferencia de herramientas comerciales o recolectores masivos
+            de datos corporativos:
+          </p>
+          <ul
+            class="list-disc pl-6 space-y-2 text-text-muted dark:text-text-dark-muted leading-relaxed"
+          >
+            <li>
+              <strong class="text-text-main dark:text-white"
+                >Sin recolección centralizada de identidad:</strong
+              > No solicitamos correos institucionales, contraseñas ni roles organizacionales
+              para el uso genérico de la herramienta.
+            </li>
+            <li>
+              <strong class="text-text-main dark:text-white"
+                >Cero telemetría de plataforma:</strong
+              > No recopilamos en segundo plano registros de direcciones IP, identificadores
+              únicos del dispositivo móvil (IMEI/UUID) ni especificaciones de hardware.
+              Tu anonimato técnico frente al sistema es absoluto.
+            </li>
+            <li>
+              <strong class="text-text-main dark:text-white"
+                >Control exclusivo del metadato:</strong
+              > La captura de variables técnicas avanzadas (como la geolocalización
+              o marcas de tiempo) depende estrictamente del diseño de cada cuestionario.
+              DataUMSA está imposibilitada para activar rastreos ocultos de forma
+              independiente.
+            </li>
+          </ul>
+        </section>
+
+        <section class="space-y-4">
+          <h2
+            class="text-2xl font-bold text-text-main dark:text-white flex items-center gap-3"
+          >
+            <span
+              class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-sm font-bold"
+              >2</span
+            >
+            Plataforma Abierta y Democrática
+          </h2>
+          <p class="text-text-muted dark:text-text-dark-muted leading-relaxed">
+            Si bien la infraestructura es impulsada y resguardada por la
+            universidad, DataUMSA es un bien tecnológico de <strong
+              class="text-text-main dark:text-white">uso libre y abierto</strong
+            > destinado a optimizar la recolección segura de información para múltiples
+            actores:
+          </p>
+          <ul
+            class="list-disc pl-6 space-y-2 text-text-muted dark:text-text-dark-muted leading-relaxed"
+          >
+            <li>
+              <strong class="text-text-main dark:text-white"
+                >Comunidad Universitaria:</strong
+              > Investigadores senior, institutos científicos, carreras que requieran
+              trabajo de campo constante y estudiantes de pregrado/posgrado desarrollando
+              sus tesis de grado.
+            </li>
+            <li>
+              <strong class="text-text-main dark:text-white"
+                >Usuarios Externos:</strong
+              > Personas, profesionales u organizaciones ajenas a la UMSA que requieran
+              un entorno robusto, ético y soberano para levantar sus datos sin ser
+              rastreados por corporaciones multinacionales.
+            </li>
+          </ul>
+        </section>
+
+        <section class="space-y-4">
+          <h2
+            class="text-2xl font-bold text-text-main dark:text-white flex items-center gap-3"
+          >
+            <span
+              class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-sm font-bold"
+              >3</span
+            >
+            Propiedad Exclusiva de los Datos Recolectados
+          </h2>
+          <p class="text-text-muted dark:text-text-dark-muted leading-relaxed">
+            DataUMSA actúa únicamente como el <strong
+              class="text-text-main dark:text-white"
+              >proveedor de la infraestructura y la bóveda de seguridad digital</strong
+            >. Toda información recolectada mediante los formularios pertenece
+            en su totalidad y de forma exclusiva al autor del proyecto. No
+            realizamos minería de datos, venta, manipulación ni monetización de
+            ninguna de las respuestas almacenadas.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2
+            class="text-2xl font-bold text-text-main dark:text-white flex items-center gap-3"
+          >
+            <span
+              class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-sm font-bold"
+              >4</span
+            >
+            Seguridad Física, Canales de Transmisión y Soberanía de Servidores
+          </h2>
+          <p class="text-text-muted dark:text-text-dark-muted leading-relaxed">
+            La aplicación móvil almacena localmente los cuestionarios
+            completados utilizando los mecanismos de encriptación interna
+            provistos por el propio dispositivo. Al momento de sincronizar, los
+            formularios viajan mediante canales altamente seguros (<strong
+              class="text-text-main dark:text-white"
+              >encriptación SSL/TLS</strong
+            >) directamente a la infraestructura física de la universidad. Esto
+            evita por completo el uso de nubes comerciales de terceros y asegura
+            la soberanía absoluta de tu información sensible frente a
+            intercepciones.
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>

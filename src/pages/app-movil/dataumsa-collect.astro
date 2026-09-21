@@ -45,11 +45,7 @@ import {
         >
             <!-- Texto de Presentación -->
             <div class="lg:col-span-7 flex flex-col justify-center">
-                <Badge
-                    variant="primary"
-                    class="mb-6 self-start animate-bounce"
-                    style="animation-duration: 3s;"
-                >
+                <Badge variant="primary" class="mb-6 self-start">
                     Aplicación Oficial Android
                 </Badge>
                 <h1
@@ -76,7 +72,7 @@ import {
                         variant="bento-primary"
                         class="group text-sm"
                     >
-                        <FiDownload class="w-4 h-4 mr-1" />
+                        <FiDownload className="w-4 h-4 mr-1" />
                         <span>Descargar Aplicación</span>
                     </Button>
                     <Button
@@ -110,15 +106,15 @@ import {
                     >
                         <div class="flex flex-col">
                             <span
-                                class="text-[11px] font-bold text-white font-display"
+                                class="text-xs font-bold text-white font-display"
                                 >DataUMSA Collect</span
                             >
-                            <span class="text-[9px] text-slate-500"
+                            <span class="text-xs text-slate-500"
                                 >ID Dispositivo: #4829</span
                             >
                         </div>
                         <div
-                            class="flex items-center gap-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-[8px] font-bold"
+                            class="flex items-center gap-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-xs font-bold"
                         >
                             <span
                                 class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"
@@ -134,7 +130,7 @@ import {
                             class="bg-slate-900 border border-white/5 p-3 rounded-xl flex flex-col gap-1"
                         >
                             <span
-                                class="text-[9px] font-bold uppercase tracking-wider text-slate-500"
+                                class="text-xs font-bold uppercase tracking-wider text-slate-500"
                                 >Proyecto Activo</span
                             >
                             <span class="text-xs font-bold text-white"
@@ -145,20 +141,20 @@ import {
                         <!-- Input 1 -->
                         <div class="flex flex-col gap-1.5">
                             <label
-                                class="text-[9px] font-bold uppercase tracking-wider text-slate-500"
+                                class="text-xs font-bold uppercase tracking-wider text-slate-500"
                                 >1. Nivel de Mantenimiento</label
                             >
                             <div class="grid grid-cols-3 gap-1.5">
                                 <span
-                                    class="border border-primary bg-primary/20 text-primary-light text-[9px] font-bold py-2 rounded-md text-center shadow-sm"
+                                    class="border border-primary bg-primary/20 text-primary-light text-xs font-bold py-2 rounded-md text-center shadow-sm"
                                     >Bueno</span
                                 >
                                 <span
-                                    class="border border-white/5 bg-slate-900 text-slate-400 text-[9px] font-medium py-2 rounded-md text-center"
+                                    class="border border-white/5 bg-slate-900 text-slate-400 text-xs font-medium py-2 rounded-md text-center"
                                     >Regular</span
                                 >
                                 <span
-                                    class="border border-white/5 bg-slate-900 text-slate-400 text-[9px] font-medium py-2 rounded-md text-center"
+                                    class="border border-white/5 bg-slate-900 text-slate-400 text-xs font-medium py-2 rounded-md text-center"
                                     >Crítico</span
                                 >
                             </div>
@@ -167,17 +163,17 @@ import {
                         <!-- Input 2 (GPS) -->
                         <div class="flex flex-col gap-1.5">
                             <label
-                                class="text-[9px] font-bold uppercase tracking-wider text-slate-500"
+                                class="text-xs font-bold uppercase tracking-wider text-slate-500"
                                 >2. Ubicación GPS</label
                             >
                             <div
                                 class="flex gap-2 items-center px-3 py-2 bg-primary/10 border border-primary/20 rounded-lg text-primary-light"
                             >
                                 <FiMapPin
-                                    class="w-3.5 h-3.5 animate-bounce text-primary"
+                                    className="w-3.5 h-3.5 text-primary shrink-0 transition-transform duration-300"
                                 />
                                 <span
-                                    class="text-[10px] font-mono font-semibold"
+                                    class="text-xs font-mono font-semibold"
                                     >16.5029º S, 68.1205º W</span
                                 >
                             </div>
@@ -186,12 +182,12 @@ import {
                         <!-- Input 3 (Checklist) -->
                         <div class="flex flex-col gap-1.5">
                             <label
-                                class="text-[9px] font-bold uppercase tracking-wider text-slate-500"
+                                class="text-xs font-bold uppercase tracking-wider text-slate-500"
                                 >3. Inventario verificado</label
                             >
                             <div class="flex flex-col gap-2">
                                 <label
-                                    class="flex items-center gap-2 text-[10px] text-slate-300 font-medium"
+                                    class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                                 >
                                     <input
                                         type="checkbox"
@@ -201,7 +197,7 @@ import {
                                     /> Equipos de Computación
                                 </label>
                                 <label
-                                    class="flex items-center gap-2 text-[10px] text-slate-300 font-medium"
+                                    class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                                 >
                                     <input
                                         type="checkbox"
@@ -211,7 +207,7 @@ import {
                                     /> Conexión de Red
                                 </label>
                                 <label
-                                    class="flex items-center gap-2 text-[10px] text-slate-300 font-medium"
+                                    class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                                 >
                                     <input
                                         type="checkbox"
@@ -231,13 +227,13 @@ import {
                             class="w-full bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl py-2.5 px-4 flex items-center justify-between shadow-lg shadow-primary/20"
                         >
                             <span
-                                class="text-[10px] font-bold uppercase tracking-wider"
+                                class="text-xs font-bold uppercase tracking-wider"
                                 >Sincronizado</span
                             >
-                            <FiCheckCircle class="w-3.5 h-3.5 text-white" />
+                            <FiCheckCircle className="w-3.5 h-3.5 text-white" />
                         </div>
                         <span
-                            class="text-[8.5px] text-center text-slate-500 font-medium"
+                            class="text-xs text-center text-slate-500 font-medium"
                             >Todos los registros guardados en la nube</span
                         >
                     </div>
@@ -301,7 +297,7 @@ import {
                         <div
                             class="absolute -top-1 -right-1 w-10 h-10 rounded-full bg-white border border-border flex items-center justify-center shadow-sm"
                         >
-                            <FiWifiOff class="w-5 h-5 text-amber-500" />
+                            <FiWifiOff className="w-5 h-5 text-amber-500" />
                         </div>
                     </div>
 
@@ -332,19 +328,19 @@ import {
                     >
                         <div class="flex items-center gap-4 relative z-10">
                             <FiSmartphone
-                                class="w-7 h-7 text-primary-dark"
+                                className="w-7 h-7 text-primary-dark"
                             />
                             <div
                                 class="w-10 h-0.5 border-t-2 border-dashed border-primary animate-[pulse_1.5s_infinite]"
                             >
                             </div>
-                            <FiServer class="w-7 h-7 text-primary-dark" />
+                            <FiServer className="w-7 h-7 text-primary-dark" />
                         </div>
                         <div
                             class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                         >
                             <FiLock
-                                class="w-6 h-6 text-primary animate-bounce"
+                                className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-110"
                             />
                         </div>
                     </div>
@@ -375,7 +371,7 @@ import {
                         class="w-36 h-36 rounded-2xl bg-bg-main border border-border flex-shrink-0 flex flex-col items-center justify-center p-3 relative overflow-hidden shadow-sm"
                     >
                         <div
-                            class="flex flex-col gap-2 w-full text-[9px] font-mono"
+                            class="flex flex-col gap-2 w-full text-xs font-mono"
                         >
                             <div
                                 class="bg-white border border-border p-1.5 rounded shadow-xs"
@@ -433,7 +429,7 @@ import {
                                     >75%</span
                                 >
                                 <span
-                                    class="text-[7px] font-bold text-text-muted uppercase"
+                                    class="text-xs font-bold text-text-muted uppercase"
                                     >Completado</span
                                 >
                             </div>
@@ -507,7 +503,7 @@ import {
                         <p
                             class="text-text-muted font-sans text-sm md:text-base max-w-sm"
                         >
-                            Busca **DataUMSA Collect** en la Google Play Store
+                            Busca <strong class="text-text-main font-bold">DataUMSA Collect</strong> en la Google Play Store
                             de tu dispositivo Android e instálala de forma
                             completamente gratuita.
                         </p>
@@ -523,11 +519,11 @@ import {
                             <div
                                 class="w-9 h-9 rounded bg-emerald-500 flex items-center justify-center text-white"
                             >
-                                <FiPlay class="w-5 h-5 fill-current" />
+                                <FiPlay className="w-5 h-5 fill-current" />
                             </div>
                             <div class="flex-grow flex flex-col gap-1">
                                 <span
-                                    class="text-[10px] font-bold text-text-main"
+                                    class="text-xs font-bold text-text-main"
                                     >DataUMSA Collect</span
                                 >
                                 <div
@@ -540,7 +536,7 @@ import {
                                 </div>
                             </div>
                             <span
-                                class="text-[10px] font-bold text-emerald-600 font-mono"
+                                class="text-xs font-bold text-emerald-600 font-mono"
                                 >75%</span
                             >
                         </div>
@@ -587,19 +583,19 @@ import {
                                 class="h-6 w-full bg-white/5 rounded px-2 flex items-center justify-between"
                             >
                                 <span
-                                    class="text-[9px] text-slate-400 font-mono"
+                                    class="text-xs text-slate-400 font-mono"
                                     >usuario@umsa.bo</span
                                 >
-                                <FiCheck class="w-3 h-3 text-emerald-400" />
+                                <FiCheck className="w-3 h-3 text-emerald-400" />
                             </div>
                             <div
                                 class="h-6 w-full bg-white/5 rounded px-2 flex items-center justify-between"
                             >
                                 <span
-                                    class="text-[9px] text-slate-400 font-mono"
+                                    class="text-xs text-slate-400 font-mono"
                                     >••••••••••••</span
                                 >
-                                <FiEye class="w-3 h-3 text-slate-500" />
+                                <FiEye className="w-3 h-3 text-slate-500" />
                             </div>
                         </div>
                     </div>
@@ -645,16 +641,16 @@ import {
                                 class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary-dark"
                             >
                                 <FiDownload
-                                    class="w-5 h-5 animate-[bounce_2s_infinite]"
+                                    className="w-5 h-5 animate-[bounce_2s_infinite]"
                                 />
                             </div>
                             <div class="flex-grow flex flex-col gap-1">
                                 <span
-                                    class="text-[10px] font-bold text-text-main"
+                                    class="text-xs font-bold text-text-main"
                                     >Ficha_Socioeconomica.xml</span
                                 >
                                 <span
-                                    class="text-[8px] text-text-muted font-mono"
+                                    class="text-xs text-text-muted font-mono"
                                     >Tamaño: 245 KB | v2.4</span
                                 >
                             </div>
@@ -699,18 +695,18 @@ import {
                             class="w-full max-w-[280px] bg-white border border-border p-4 rounded-2xl shadow-sm flex flex-col gap-2"
                         >
                             <label
-                                class="flex items-center gap-2 text-[10px] text-text-main font-bold"
+                                class="flex items-center gap-2 text-xs text-text-main font-bold"
                             >
                                 <span
-                                    class="w-4 h-4 rounded bg-emerald-500 flex items-center justify-center text-white text-[9px]"
+                                    class="w-4 h-4 rounded bg-emerald-500 flex items-center justify-center text-white text-xs"
                                     ><FiCheck /></span
                                 > Muestra de agua tomada
                             </label>
                             <label
-                                class="flex items-center gap-2 text-[10px] text-text-main font-bold"
+                                class="flex items-center gap-2 text-xs text-text-main font-bold"
                             >
                                 <span
-                                    class="w-4 h-4 rounded bg-emerald-500 flex items-center justify-center text-white text-[9px]"
+                                    class="w-4 h-4 rounded bg-emerald-500 flex items-center justify-center text-white text-xs"
                                     ><FiCheck /></span
                                 > Fotografía de turbidez adjunta
                             </label>
@@ -759,17 +755,17 @@ import {
                                     class="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center text-success-dark"
                                 >
                                     <FiRefreshCw
-                                        class="w-4 h-4 animate-spin"
-                                        style="animation-duration: 6s;"
+                                        className="w-4 h-4 animate-spin"
+                                        style={{ animationDuration: "6s" }}
                                     />
                                 </div>
                                 <span
-                                    class="text-[10px] font-bold text-text-main"
+                                    class="text-xs font-bold text-text-main"
                                     >Subiendo datos...</span
                                 >
                             </div>
                             <span
-                                class="text-[9px] font-bold bg-success-light/30 text-success-dark border border-success/20 px-2 py-0.5 rounded-full font-mono"
+                                class="text-xs font-bold bg-success-light/30 text-success-dark border border-success/20 px-2 py-0.5 rounded-full font-mono"
                                 >100% OK</span
                             >
                         </div>
@@ -801,7 +797,7 @@ import {
                 variant="bento-primary"
                 class="group text-sm"
             >
-                <FiDownload class="w-4 h-4 mr-1" />
+                <FiDownload className="w-4 h-4 mr-1" />
                 <span>Ir al Centro de Descargas</span>
             </Button>
         </div>

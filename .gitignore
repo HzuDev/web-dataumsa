@@ -1,5 +1,6 @@
 # build output
 dist/
+
 # generated types
 .astro/
 
@@ -12,13 +13,35 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
-# environment variables
+# environment variables and sensitive files
 .env
-.env.production
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+credentials*.json
+*.secret
 
-# macOS-specific files
+# IDE and editors
+.vscode/
+.idea/
+*.sw?
+*.suo
+
+# macOS / Windows specific files
 .DS_Store
+Thumbs.db
 
-#other files
-.agents
+# AI assistants, skills, and agent configs
+.agents/
+.codex/
+.impeccable/
+.gemini/
+.claude/
+.cursor/
+skills-lock.json

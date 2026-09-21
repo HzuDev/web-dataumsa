@@ -2,6 +2,7 @@
 // Componente HitoSection - Estilo Timeline Conectado para DataUMSA
 import Badge from "./Badge.astro";
 import TextReveal from "./TextReveal.astro";
+import { FiFlag, FiTrendingUp, FiCheckCircle, FiShield } from "react-icons/fi";
 ---
 
 <section
@@ -56,20 +57,11 @@ import TextReveal from "./TextReveal.astro";
             >
             </div>
 
-            <div class="relative w-7 h-9 flex z-10">
-              <div
-                class="w-[3px] h-full bg-text-dark-muted group-hover:bg-primary transition-colors rounded-full"
-              >
-              </div>
-              <div
-                class="w-5 h-5 bg-text-dark-muted/20 group-hover:bg-primary/20 border-y-2 border-r-2 border-text-dark-muted group-hover:border-primary rounded-r-md mt-1 transition-colors"
-              >
-              </div>
-            </div>
+            <FiFlag className="w-8 h-8 text-text-dark-muted group-hover:text-primary transition-colors z-10" />
           </div>
-          <h3 class="text-xl font-black text-white mb-2">Pionero</h3>
+          <h3 class="text-xl font-black text-white mb-2">Censo UMSA</h3>
           <p class="text-sm text-text-dark-muted leading-relaxed">
-            Primer censo digital a gran escala de la UMSA
+            Primer operativo censal digital integral de la universidad
           </p>
         </div>
 
@@ -100,9 +92,9 @@ import TextReveal from "./TextReveal.astro";
               </div>
             </div>
           </div>
-          <h3 class="text-xl font-black text-white mb-2">Escalable</h3>
+          <h3 class="text-xl font-black text-white mb-2">80,000+ Registros</h3>
           <p class="text-sm text-text-dark-muted leading-relaxed">
-            Demostró capacidad para miles de respuestas simultáneas
+            Capacidad probada para miles de respuestas simultáneas
           </p>
         </div>
 
@@ -129,9 +121,9 @@ import TextReveal from "./TextReveal.astro";
               </div>
             </div>
           </div>
-          <h3 class="text-xl font-black text-white mb-2">Confiable</h3>
+          <h3 class="text-xl font-black text-white mb-2">13 Facultades</h3>
           <p class="text-sm text-text-dark-muted leading-relaxed">
-            Funcionamiento robusto en condiciones reales
+            Despliegue transversal en todas las áreas de conocimiento
           </p>
         </div>
 
@@ -163,9 +155,9 @@ import TextReveal from "./TextReveal.astro";
               </div>
             </div>
           </div>
-          <h3 class="text-xl font-black text-white mb-2">Soberano</h3>
+          <h3 class="text-xl font-black text-white mb-2">100% Soberano</h3>
           <p class="text-sm text-text-dark-muted leading-relaxed">
-            Todos los datos bajo el control total de la universidad
+            Custodia local en servidores del Datacenter DTIC UMSA
           </p>
         </div>
       </div>

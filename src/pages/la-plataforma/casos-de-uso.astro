@@ -21,7 +21,7 @@ import {
 ---
 
 <Layout
-  title="Casos de Uso | DataUMSA"
+  title="Casos de Uso"
   description="Descubre las aplicaciones prácticas, casos de estudio y ejemplos de implementación de DataUMSA en la academia y la investigación."
 >
   <section
@@ -62,7 +62,7 @@ import {
             <div
               class="w-12 h-12 rounded-[var(--radius-md)] bg-primary/10 border border-primary/25 flex items-center justify-center text-primary-dark"
             >
-              <FiBookOpen class="w-6 h-6" strokeWidth={2} />
+              <FiBookOpen className="w-6 h-6" strokeWidth={2} />
             </div>
             <span
               class="text-xs font-bold uppercase tracking-wider text-primary-dark font-mono"
@@ -88,11 +88,13 @@ import {
               herramientas comerciales comunes.
             </p>
             <p>
-              Mediante el estándar **XLSForm**, los investigadores pueden
-              programar validaciones lógicas avanzadas en el dispositivo móvil
-              (por ejemplo, asegurar que el peso y la talla ingresados estén en
-              rangos realistas y calcular el IMC al instante), reduciendo
-              drásticamente la tasa de error en la captura inicial.
+              Mediante el estándar <strong class="text-text-main font-bold"
+                >XLSForm</strong
+              >, los investigadores pueden programar validaciones lógicas
+              avanzadas en el dispositivo móvil (por ejemplo, asegurar que el
+              peso y la talla ingresados estén en rangos realistas y calcular el
+              IMC al instante), reduciendo drásticamente la tasa de error en la
+              captura inicial.
             </p>
 
             <!-- Puntos clave con Checks -->
@@ -101,22 +103,26 @@ import {
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-primary/15 text-primary-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Soberanía de datos:** Información guardada localmente bajo
-                  la normativa y seguridad de la UMSA.</span
+                  ><strong class="text-text-main font-bold"
+                    >Soberanía de datos:</strong
+                  > Información guardada localmente bajo la normativa y seguridad
+                  de la UMSA.</span
                 >
               </li>
               <li class="flex items-start gap-3">
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-primary/15 text-primary-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Interoperabilidad Directa:** Exportación nativa a formatos
-                  SPSS (`.sav`), Stata (`.dta`), R y Excel.</span
+                  ><strong class="text-text-main font-bold"
+                    >Interoperabilidad Directa:</strong
+                  > Exportación nativa a formatos SPSS (`.sav`), Stata (`.dta`), R
+                  y Excel.</span
                 >
               </li>
             </ul>
@@ -149,7 +155,7 @@ import {
             >
               <span>Ver especificaciones de diseño</span>
               <FiArrowRight
-                class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
+                className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
               />
             </Button>
           </div>
@@ -174,9 +180,9 @@ import {
               </div>
               <div class="flex gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1"
+                  class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1"
                 >
-                  <FiDatabase class="w-3 h-3" /> Validado
+                  <FiDatabase className="w-3 h-3" /> Validado
                 </span>
               </div>
             </div>
@@ -208,7 +214,7 @@ import {
                     class="w-full bg-gradient-to-t from-primary/80 to-primary rounded-t-lg h-24 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-1_1.5s_ease-out_forwards]"
                   >
                   </div>
-                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                  <span class="text-xs font-mono text-text-muted font-bold"
                     >Muestra A</span
                   >
                 </div>
@@ -220,7 +226,7 @@ import {
                     class="w-full bg-gradient-to-t from-accent/80 to-accent rounded-t-lg h-16 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-2_1.5s_ease-out_forwards]"
                   >
                   </div>
-                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                  <span class="text-xs font-mono text-text-muted font-bold"
                     >Muestra B</span
                   >
                 </div>
@@ -232,7 +238,7 @@ import {
                     class="w-full bg-gradient-to-t from-emerald-400 to-success rounded-t-lg h-28 shadow-md group-hover/bar:scale-x-105 transition-transform origin-bottom duration-300 animate-[grow-bar-3_1.5s_ease-out_forwards]"
                   >
                   </div>
-                  <span class="text-[10px] font-mono text-text-muted font-bold"
+                  <span class="text-xs font-mono text-text-muted font-bold"
                     >Muestra C</span
                   >
                 </div>
@@ -246,19 +252,19 @@ import {
                 >Exportar:</span
               >
               <div
-                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-xs font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
               >
-                <FiDownload class="w-3.5 h-3.5 text-primary" /> SPSS (.sav)
+                <FiDownload className="w-3.5 h-3.5 text-primary" /> SPSS (.sav)
               </div>
               <div
-                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-xs font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
               >
-                <FiDownload class="w-3.5 h-3.5 text-accent" /> Stata (.dta)
+                <FiDownload className="w-3.5 h-3.5 text-accent" /> Stata (.dta)
               </div>
               <div
-                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-[11px] font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
+                class="px-3 py-1.5 rounded-lg bg-bg-main border border-border text-text-main text-xs font-bold flex items-center gap-1 shadow-sm hover:border-primary/40 transition-colors"
               >
-                <FiDownload class="w-3.5 h-3.5 text-success" /> Excel (.xlsx)
+                <FiDownload className="w-3.5 h-3.5 text-success" /> Excel (.xlsx)
               </div>
             </div>
           </div>
@@ -290,15 +296,15 @@ import {
                 <span class="text-xs font-bold text-text-main font-display"
                   >DataUMSA Collector</span
                 >
-                <span class="text-[10px] text-text-muted"
+                <span class="text-xs text-text-muted"
                   >Proyecto: Práctica Geológica</span
                 >
               </div>
               <!-- Indicador Offline -->
               <div
-                class="flex items-center gap-1 bg-amber-100 border border-amber-200 text-amber-800 px-2 py-0.5 rounded-full text-[9px] font-bold"
+                class="flex items-center gap-1 bg-amber-100 border border-amber-200 text-amber-800 px-2.5 py-0.5 rounded-full text-xs font-bold"
               >
-                <FiWifiOff class="w-2.5 h-2.5" /> Offline
+                <FiWifiOff className="w-2.5 h-2.5" /> Offline
               </div>
             </div>
 
@@ -309,7 +315,7 @@ import {
               <!-- Campo 1 -->
               <div class="flex flex-col gap-1">
                 <label
-                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted"
                   >1. Tipo de formación rocosa</label
                 >
                 <input
@@ -322,13 +328,15 @@ import {
               <!-- Campo 2 (GPS) -->
               <div class="flex flex-col gap-1">
                 <label
-                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted"
                   >2. Coordenadas de Muestra</label
                 >
                 <div
                   class="flex gap-2 items-center px-3 py-2 bg-primary/5 border border-primary/20 rounded-lg"
                 >
-                  <FiMapPin class="w-3.5 h-3.5 text-primary animate-bounce" />
+                  <FiMapPin
+                    className="w-3.5 h-3.5 text-primary shrink-0 transition-transform duration-300 group-hover:scale-110"
+                  />
                   <span
                     class="text-xs font-mono text-primary-dark font-semibold"
                     >16.5001º S, 68.1500º W</span
@@ -338,7 +346,7 @@ import {
               <!-- Campo 3 (Multimedia) -->
               <div class="flex flex-col gap-1">
                 <label
-                  class="text-[10px] font-bold uppercase tracking-wider text-text-muted"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted"
                   >3. Registro Fotográfico</label
                 >
                 <div
@@ -351,7 +359,7 @@ import {
                     <div class="w-4 h-4 rounded-full bg-slate-100"></div>
                   </div>
                   <span
-                    class="absolute bottom-2 right-2 text-[9px] font-bold bg-black/60 text-white px-2 py-0.5 rounded"
+                    class="absolute bottom-2 right-2 text-xs font-bold bg-black/60 text-white px-2 py-0.5 rounded"
                     >imagen_1.jpg</span
                   >
                 </div>
@@ -371,7 +379,7 @@ import {
                   style="animation-duration: 4s;"
                 />
               </div>
-              <span class="text-[9px] text-center text-text-muted font-medium"
+              <span class="text-xs text-center text-text-muted font-medium"
                 >3 registros listos para enviar al servidor</span
               >
             </div>
@@ -384,7 +392,7 @@ import {
             <div
               class="w-12 h-12 rounded-[var(--radius-md)] bg-success/10 border border-success/25 flex items-center justify-center text-success-dark"
             >
-              <FiUsers class="w-6 h-6" strokeWidth={2} />
+              <FiUsers className="w-6 h-6" strokeWidth={2} />
             </div>
             <span
               class="text-xs font-bold uppercase tracking-wider text-success-dark font-mono"
@@ -423,22 +431,25 @@ import {
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-success/15 text-success-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Captura Multimedia e Híbrida:** Fotos, grabaciones de
-                  audio, firmas digitales y GPS integrados.</span
+                  ><strong class="text-text-main font-bold"
+                    >Captura Multimedia e Híbrida:</strong
+                  > Fotos, grabaciones de audio, firmas digitales y GPS integrados.</span
                 >
               </li>
               <li class="flex items-start gap-3">
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-success/15 text-success-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Gestión Docente Dinámica:** Asignación de formularios por
-                  grupos de alumnos y visualización de avances.</span
+                  ><strong class="text-text-main font-bold"
+                    >Gestión Docente Dinámica:</strong
+                  > Asignación de formularios por grupos de alumnos y visualización
+                  de avances.</span
                 >
               </li>
             </ul>
@@ -530,8 +541,10 @@ import {
                   <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Alta Concurrencia:** Soporte robusto de recepción de datos
-                  concurrentes sin caídas de servidor.</span
+                  ><strong class="text-text-main font-bold"
+                    >Alta Concurrencia:</strong
+                  > Soporte robusto de recepción de datos concurrentes sin caídas
+                  de servidor.</span
                 >
               </li>
               <li class="flex items-start gap-3">
@@ -541,8 +554,9 @@ import {
                   <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Auditoría y Control de Calidad:** Registro del tiempo por
-                  sección y de metadatos del dispositivo.</span
+                  ><strong class="text-text-main font-bold"
+                    >Auditoría y Control de Calidad:</strong
+                  > Registro del tiempo por sección y de metadatos del dispositivo.</span
                 >
               </li>
             </ul>
@@ -584,7 +598,7 @@ import {
               <div class="flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"
                 ></span>
-                <span class="text-[10px] font-bold uppercase text-emerald-600"
+                <span class="text-xs font-bold uppercase text-emerald-600"
                   >Servidores Activos</span
                 >
               </div>
@@ -596,7 +610,7 @@ import {
                 class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
               >
                 <span
-                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted mb-1"
                   >Cuestionarios</span
                 >
                 <span
@@ -608,7 +622,7 @@ import {
                 class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
               >
                 <span
-                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted mb-1"
                   >Encuestadores</span
                 >
                 <span
@@ -620,7 +634,7 @@ import {
                 class="bg-bg-main border border-border p-3 rounded-xl flex flex-col justify-center"
               >
                 <span
-                  class="text-[9px] font-bold uppercase tracking-wider text-text-muted mb-1"
+                  class="text-xs font-bold uppercase tracking-wider text-text-muted mb-1"
                   >Eficacia</span
                 >
                 <span
@@ -633,7 +647,7 @@ import {
             <!-- Gráfico de Línea del Censo (Rendimiento por Hora) -->
             <div class="flex-grow flex flex-col justify-end relative">
               <span
-                class="absolute left-0 top-0 text-[9px] font-bold text-text-muted flex items-center gap-1"
+                class="absolute left-0 top-0 text-xs font-bold text-text-muted flex items-center gap-1"
               >
                 <FiTrendingUp className="text-primary" /> Tendencia de Carga (Sincronización/min)
               </span>
@@ -701,12 +715,12 @@ import {
                   >bash - api_request.sh</span
                 >
               </div>
-              <FiTerminal class="text-slate-500 w-4 h-4" />
+              <FiTerminal className="text-slate-500 w-4 h-4" />
             </div>
 
             <!-- Terminal Body (Código e JSON) -->
             <div
-              class="flex-grow font-mono text-[11px] leading-relaxed text-slate-300 space-y-4 overflow-y-auto max-h-[220px]"
+              class="flex-grow font-mono text-xs leading-relaxed text-slate-300 space-y-4 overflow-y-auto max-h-[220px]"
             >
               <!-- Query -->
               <div>
@@ -724,7 +738,7 @@ import {
               <div class="border-t border-slate-800/60 pt-3">
                 <span class="text-slate-500">// Response 200 OK</span>
                 <pre
-                  class="text-slate-300 font-mono text-[10.5px] mt-1 whitespace-pre-wrap">
+                  class="text-slate-300 font-mono text-xs mt-1 whitespace-pre-wrap">
 <span class="text-yellow-300">&#123;</span>
   <span class="text-pink-400">"status"</span>: <span class="text-emerald-400">"success"</span>,
   <span class="text-pink-400">"data"</span>: <span class="text-yellow-300">[</span>
@@ -773,12 +787,15 @@ import {
               (ONGs) y consultoras locales.
             </p>
             <p>
-              A través de nuestro sistema de **APIs seguras**, las
-              organizaciones pueden automatizar el flujo de datos. En lugar de
-              procesar manualmente la información al finalizar el proyecto, los
-              registros sincronizados en campo alimentan de forma inmediata
-              tableros de inteligencia de negocios como **Microsoft PowerBI o
-              Tableau**.
+              A través de nuestro sistema de <strong
+                class="text-text-main font-bold">APIs seguras</strong
+              >, las organizaciones pueden automatizar el flujo de datos. En
+              lugar de procesar manualmente la información al finalizar el
+              proyecto, los registros sincronizados en campo alimentan de forma
+              inmediata tableros de inteligencia de negocios como <strong
+                class="text-text-main font-bold"
+                >Microsoft PowerBI o Tableau</strong
+              >.
             </p>
 
             <!-- Puntos clave con Checks -->
@@ -787,22 +804,26 @@ import {
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/15 text-success-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Integración vía API REST:** Conectores automatizados para
-                  ingesta de datos en plataformas externas.</span
+                  ><strong class="text-text-main font-bold"
+                    >Integración vía API REST:</strong
+                  > Conectores automatizados para ingesta de datos en plataformas
+                  externas.</span
                 >
               </li>
               <li class="flex items-start gap-3">
                 <div
                   class="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/15 text-success-dark"
                 >
-                  <FiCheck class="w-3 h-3" strokeWidth={3} />
+                  <FiCheck className="w-3 h-3" strokeWidth={3} />
                 </div>
                 <span class="text-text-main text-sm font-medium"
-                  >**Open Data / Datos Abiertos:** Módulo para la publicación
-                  controlada y anonimizada de bases de datos.</span
+                  ><strong class="text-text-main font-bold"
+                    >Open Data / Datos Abiertos:</strong
+                  > Módulo para la publicación controlada y anonimizada de bases de
+                  datos.</span
                 >
               </li>
             </ul>

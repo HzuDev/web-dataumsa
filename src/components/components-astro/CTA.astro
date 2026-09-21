@@ -36,11 +36,14 @@ import TextReveal from "./TextReveal.astro";
         <div
             class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 w-full sm:w-auto"
         >
-            <Button href="/registro" variant="bento-primary">
-                Crear cuenta gratis
+            <Button href="https://app-dataumsa.sociest.org/accounts/login/" variant="bento-primary">
+                Acceso Institucional UMSA
+            </Button>
+            <Button href="/app-movil/descargas" variant="bento-secondary">
+                Descargar DataUMSA Collect APK
             </Button>
             <Button href="/docs" variant="bento-secondary">
-                Explorar documentación
+                Guías y Documentación
             </Button>
         </div>
     </div>
@@ -72,6 +75,6 @@ import TextReveal from "./TextReveal.astro";
 
     .bento-card:hover {
         transform: translateY(-4px);
-        box-shadow: var(--shadow-glass, 0 25px 50px -12px rgba(0, 0, 0, 0.25));
+        box-shadow: var(--shadow-glass);
     }
 </style>
