@@ -1,6 +1,16 @@
 import React, { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { FiMenu, FiExternalLink } from "react-icons/fi";
+import {
+    FiMenu,
+    FiExternalLink,
+    FiLayers,
+    FiBarChart2,
+    FiCompass,
+    FiSmartphone,
+    FiDownload,
+    FiBookOpen,
+    FiUsers,
+} from "react-icons/fi";
 
 export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNode }) => {
     return (
@@ -9,7 +19,7 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
                 links={[
                     {
                         title: "Inicio",
-                        href: "/"
+                        href: "/",
                     },
                     {
                         title: "La Plataforma",
@@ -17,14 +27,17 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
                             {
                                 title: "Características",
                                 href: "/la-plataforma/caracteristicas",
+                                icon: FiLayers,
                             },
                             {
                                 title: "Comparativa",
                                 href: "/la-plataforma/comparativa",
+                                icon: FiBarChart2,
                             },
                             {
                                 title: "Casos de Uso",
                                 href: "/la-plataforma/casos-de-uso",
+                                icon: FiCompass,
                             },
                         ],
                     },
@@ -32,7 +45,7 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
                         title: "Documentación",
                         href: "/docs",
                         target: "_blank",
-                        isExternal: true
+                        isExternal: true,
                     },
                     {
                         title: "App Móvil",
@@ -40,10 +53,12 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
                             {
                                 title: "DataUMSA Collect",
                                 href: "/app-movil/dataumsa-collect",
+                                icon: FiSmartphone,
                             },
                             {
                                 title: "Descargas",
                                 href: "/app-movil/descargas",
+                                icon: FiDownload,
                             },
                         ],
                     },
@@ -53,10 +68,12 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
                             {
                                 title: "Historia",
                                 href: "/sobre-dataumsa/historia",
+                                icon: FiBookOpen,
                             },
                             {
                                 title: "Equipo e Institucional",
                                 href: "/sobre-dataumsa/equipo-institucional",
+                                icon: FiUsers,
                             },
                         ],
                     },
@@ -73,7 +90,11 @@ export const RoundedDrawerNavExample = ({ children }: { children?: React.ReactNo
 type LinkType = {
     title: string;
     href?: string;
-    sublinks?: { title: string; href: string }[];
+    sublinks?: {
+        title: string;
+        href: string;
+        icon?: React.ComponentType<{ className?: string }>;
+    }[];
     target?: string;
     isExternal?: boolean;
 };
@@ -215,20 +236,29 @@ const DesktopSubmenu = ({
                         }}
                         transition={{
                             duration: 0.2,
-                            ease: "easeInOut"
+                            ease: "easeInOut",
                         }}
-                        className="py-3 px-6 mt-3 rounded-2xl bg-slate-50/90 border border-border/80 shadow-xs overflow-hidden flex flex-wrap items-center gap-6"
+                        className="py-3 px-6 mt-3 rounded-2xl bg-slate-50/90 border border-border/80 shadow-xs overflow-hidden flex flex-wrap items-center gap-4"
                     >
-                        {activeSublinks.map((l) => (
-                            <a
-                                className="inline-flex items-center gap-2 text-base font-semibold text-text-main transition-colors hover:text-primary-dark no-underline font-display py-1.5 px-3 rounded-lg hover:bg-white"
-                                href={l.href}
-                                key={l.title}
-                            >
-                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                                {l.title}
-                            </a>
-                        ))}
+                        {activeSublinks.map((l) => {
+                            const SubIcon = l.icon;
+                            return (
+                                <a
+                                    className="group/sublink inline-flex items-center gap-2.5 text-base font-semibold text-text-main transition-all duration-200 hover:text-primary-dark no-underline font-display py-1.5 px-3 rounded-xl hover:bg-white hover:shadow-xs"
+                                    href={l.href}
+                                    key={l.title}
+                                >
+                                    {SubIcon ? (
+                                        <span className="w-6 h-6 rounded-lg bg-primary/10 text-primary flex items-center justify-center transition-all duration-200 group-hover/sublink:bg-primary group-hover/sublink:text-white shrink-0">
+                                            <SubIcon className="w-3.5 h-3.5" />
+                                        </span>
+                                    ) : (
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+                                    )}
+                                    <span>{l.title}</span>
+                                </a>
+                            );
+                        })}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -271,15 +301,20 @@ const MobileLinks = ({ links, open }: { links: LinkType[]; open: boolean }) => {
                                         {l.title}
                                     </span>
                                 )}
-                                {l.sublinks && l.sublinks.map((sl) => (
-                                    <a
-                                        className="text-md block text-text-muted no-underline hover:text-primary-dark font-display"
-                                        href={sl.href}
-                                        key={sl.title}
-                                    >
-                                        {sl.title}
-                                    </a>
-                                ))}
+                                {l.sublinks &&
+                                    l.sublinks.map((sl) => {
+                                        const SubIcon = sl.icon;
+                                        return (
+                                            <a
+                                                className="text-md text-text-muted no-underline hover:text-primary-dark font-display flex items-center gap-2 py-0.5"
+                                                href={sl.href}
+                                                key={sl.title}
+                                            >
+                                                {SubIcon && <SubIcon className="w-4 h-4 text-primary shrink-0" />}
+                                                <span>{sl.title}</span>
+                                            </a>
+                                        );
+                                    })}
                             </div>
                         );
                     })}
