@@ -20,150 +20,147 @@ import {
 ---
 
 <Layout
-    title="Descarga DataUMSA Collect | Aplicación Móvil"
-    description="Descarga la aplicación oficial DataUMSA Collect para recolectar datos en campo de forma offline en dispositivos Android."
+    title="Descarga DATAUMSA Collect | Aplicación Móvil"
+    description="Descarga la aplicación oficial DATAUMSA Collect para recolectar datos en campo de forma offline en dispositivos Android."
 >
-    <!-- Split Hero Section -->
-    <section class="w-full py-20 md:py-32 relative overflow-hidden flex items-center justify-center">
-        <!-- Luces de fondo -->
-        <div class="absolute top-1/4 left-1/3 w-[600px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow"></div>
-        <div class="absolute bottom-1/3 right-1/4 w-[400px] h-[250px] bg-accent/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-
-        <div class="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+    <!-- 1. Split Hero Section (Main Canvas) -->
+    <section class="w-full py-16 md:py-24 bg-canvas flex flex-col items-center">
+        <div class="max-w-300 w-full mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <!-- Columna Izquierda: Información de Descarga -->
             <div class="lg:col-span-7 flex flex-col justify-center">
-                <div class="flex items-center gap-2 mb-6">
+                <div class="flex flex-wrap items-center gap-2.5 mb-5">
                     <Badge variant="primary">Distribución Oficial UMSA</Badge>
-                    <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-900 text-primary border border-primary/20">
+                    <span class="text-xs font-mono font-bold px-3 py-1 rounded-full bg-white text-ink border border-ink">
                         Versión 3.0
                     </span>
                 </div>
 
-                <h1 class="text-text-main font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6">
+                <h1 class="text-ink font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.035em] leading-[1.08] mb-5">
                     Lleva la recolección <br />
                     <TextReveal variant="light">
                         a tu dispositivo Android
                     </TextReveal>
                 </h1>
 
-                <p class="text-text-muted font-sans text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+                <p class="text-text-muted font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-xl font-medium">
                     Instala la aplicación oficial{" "}
-                    <strong class="text-text-main font-bold">
-                        DataUMSA Collect
-                    </strong>{" "}
+                    <strong class="text-ink font-bold">DATAUMSA Collect</strong>{" "}
                     en tu teléfono o tableta. Diseñada para la comunidad
                     universitaria y los equipos de investigación, permitiendo
                     trabajar de forma continua incluso sin conexión a internet.
                 </p>
 
                 <!-- Tarjeta de Descarga Directa e Institucionalización -->
-                <div class="flex flex-col gap-5 max-w-xl">
-                    <!-- Botón de Descarga Directa Principal -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        <a
-                            href="/apk/DATA-UMSA-Collect-release-3.apk"
-                            download="DATA-UMSA-Collect-release-3.apk"
-                            class="bg-slate-950 hover:bg-slate-900 text-white rounded-2xl px-6 py-4 flex items-center justify-center sm:justify-start gap-3.5 border border-slate-800 transition-all duration-300 shadow-xl shadow-slate-950/20 active:scale-[0.98] select-none group/download"
-                        >
-                            <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover/download:bg-primary group-hover/download:text-white transition-all duration-300 text-primary">
-                                <FiDownload className="w-5 h-5 group-hover/download:translate-y-0.5 transition-transform" />
-                            </div>
-                            <div class="flex flex-col items-start leading-tight">
-                                <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">
-                                    Archivo de Instalación Directa
-                                </span>
-                                <span class="text-base font-bold font-sans tracking-tight text-white">
-                                    Descargar DataUMSA Collect (.apk)
-                                </span>
-                                <span class="text-xs text-primary/90 font-mono mt-0.5">
-                                    8.4 MB • Compatible con Android 5.0 o
-                                    superior
-                                </span>
-                            </div>
-                        </a>
-                    </div>
+                <div class="flex flex-col gap-4 max-w-xl">
+                    <!-- Botón Bento de Descarga Directa Principal -->
+                    <a
+                        href="/apk/DATA-UMSA-Collect-release-3.apk"
+                        download="DATA-UMSA-Collect-release-3.apk"
+                        class="bg-midnight-surface hover:bg-midnight text-white rounded-card p-5 sm:p-6 flex items-center gap-4 border-[2.5px] border-ink hover:-translate-y-1 active:translate-y-0.5 transition-transform duration-200 select-none group/download"
+                    >
+                        <div class="w-12 h-12 rounded-2xl bg-primary border-2 border-ink flex items-center justify-center shrink-0 text-ink">
+                            <FiDownload
+                                className="w-6 h-6 group-hover/download:translate-y-0.5 transition-transform"
+                                strokeWidth={2.5}
+                            />
+                        </div>
+                        <div class="flex flex-col items-start leading-tight">
+                            <span class="text-[11px] font-bold tracking-widest text-primary font-mono uppercase">
+                                Archivo de Instalación Directa
+                            </span>
+                            <span class="text-base sm:text-lg font-bold font-display tracking-tight text-white mt-0.5">
+                                Descargar DATAUMSA Collect (.apk)
+                            </span>
+                            <span class="text-xs text-text-dark-muted font-mono mt-1">
+                                8.4 MB • Compatible con Android 5.0 o superior
+                            </span>
+                        </div>
+                    </a>
 
                     <!-- Aviso de Institucionalización UMSA -->
-                    <div class="p-4 rounded-2xl bg-slate-50/80 border border-border/80 flex items-start gap-3.5 shadow-xs">
-                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                    <div class="p-4 rounded-2xl bg-white border-2 border-ink flex items-start gap-3.5">
+                        <div class="w-8 h-8 rounded-xl bg-warning border border-ink flex items-center justify-center text-ink shrink-0 mt-0.5 font-bold">
                             <FiAward className="w-4 h-4" />
                         </div>
                         <div class="flex flex-col gap-1">
-                            <span class="text-xs font-bold text-text-main uppercase tracking-wider flex items-center gap-1.5">
+                            <span class="text-xs font-bold text-ink uppercase tracking-wider font-mono flex items-center gap-1.5">
                                 Proceso de Institucionalización UMSA
-                                <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                                <span class="inline-block w-2 h-2 rounded-full bg-warning border border-ink"></span>
                             </span>
-                            <p class="text-xs text-text-muted leading-relaxed">
+                            <p class="text-xs text-text-muted leading-relaxed font-sans font-medium">
                                 La plataforma se encuentra en proceso de
                                 formalización e institucionalización en la{" "}
-                                <strong>Universidad Mayor de San Andrés</strong>
+                                <strong class="text-ink">
+                                    Universidad Mayor de San Andrés
+                                </strong>
                                 . Una vez concluida esta etapa, la aplicación
                                 estará disponible en la{" "}
-                                <strong>Google Play Store</strong>. Por el
-                                momento, puede instalarse de manera directa y
-                                segura mediante este archivo oficial.
+                                <strong class="text-ink">
+                                    Google Play Store
+                                </strong>
+                                . Por el momento, puede instalarse de manera
+                                directa y segura mediante este archivo oficial.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Columna Derecha: Mockup del Smartphone con la App Real en Ejecución -->
+            <!-- Columna Derecha: Mockup del Smartphone Bento -->
             <div class="lg:col-span-5 flex items-center justify-center relative">
-                <!-- Smartphone Mockup -->
-                <div class="w-[300px] h-[600px] rounded-[2.8rem] border-[10px] border-slate-900 bg-slate-950 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.35)] p-4 relative overflow-hidden flex flex-col justify-between select-none">
+                <div class="w-75 rounded-[2.5rem] border-[3.5px] border-ink bg-midnight-surface p-5 relative overflow-hidden flex flex-col justify-between select-none text-white">
                     <!-- Notch del Teléfono -->
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-900 rounded-b-xl z-20 flex items-center justify-center">
-                        <div class="w-10 h-1 bg-white/20 rounded-full mb-1"></div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-5 bg-midnight border-b-2 border-x-2 border-ink rounded-b-xl z-20 flex items-center justify-center">
+                        <div class="w-10 h-1 bg-white/40 rounded-full mb-0.5"></div>
                     </div>
 
                     <!-- App Bar Superior -->
-                    <div class="pt-4 flex items-center justify-between border-b border-white/10 pb-3">
+                    <div class="pt-4 flex items-center justify-between border-b-2 border-ink pb-3 mb-3">
                         <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 rounded-md bg-primary/20 border border-primary/40 flex items-center justify-center">
-                                <FiDatabase className="w-3.5 h-3.5 text-primary" />
+                            <div class="w-6 h-6 rounded-lg bg-primary border border-ink flex items-center justify-center text-ink">
+                                <FiDatabase className="w-3.5 h-3.5" />
                             </div>
                             <span class="text-xs font-bold text-white font-display">
-                                DataUMSA Collect
+                                DATAUMSA Collect
                             </span>
                         </div>
-                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            Sin conexión
+                        <span class="text-[10px] font-mono font-bold text-ink bg-success border border-ink px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ink"></span>
+                            Offline
                         </span>
                     </div>
 
-                    <!-- Pantalla Principal de la App DataUMSA Collect -->
-                    <div class="flex-grow py-4 flex flex-col gap-3.5 overflow-hidden">
+                    <!-- Pantalla Principal de la App -->
+                    <div class="grow py-2 flex flex-col gap-3 overflow-hidden">
                         <!-- Perfil / Usuario Institucional -->
-                        <div class="p-3 rounded-xl bg-slate-900/90 border border-white/5 flex items-center justify-between">
+                        <div class="p-3 rounded-xl bg-midnight border-2 border-ink flex items-center justify-between">
                             <div class="flex flex-col">
-                                <span class="text-[10px] font-mono uppercase text-slate-400 tracking-wider">
+                                <span class="text-[10px] font-mono uppercase text-text-dark-muted tracking-wider font-bold">
                                     Cuenta Institucional
                                 </span>
                                 <span class="text-xs font-bold text-white font-display">
                                     investigador@umsa.bo
                                 </span>
                             </div>
-                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-[10px] font-bold">
+                            <div class="px-2 py-0.5 rounded-md bg-primary border border-ink text-ink text-[10px] font-mono font-bold">
                                 UMSA
                             </div>
                         </div>
 
                         <!-- Card de Proyecto Activo -->
-                        <div class="p-3.5 rounded-xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-primary/20 flex flex-col gap-2 relative overflow-hidden">
+                        <div class="p-3 rounded-xl bg-midnight border-2 border-ink flex flex-col gap-1.5 relative overflow-hidden">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-bold uppercase tracking-wider text-primary font-mono">
                                     Proyecto Activo
                                 </span>
-                                <span class="text-[10px] text-slate-400 font-mono">
+                                <span class="text-[10px] text-text-dark-muted font-mono font-bold">
                                     v3.0
                                 </span>
                             </div>
-                            <span class="text-xs font-bold text-white font-display leading-snug">
+                            <span class="text-xs font-bold text-white font-display leading-tight">
                                 Relevamiento Socioeconómico y Ambiental 2026
                             </span>
-                            <div class="flex items-center gap-2 text-[10px] text-slate-400 pt-1 border-t border-white/5">
+                            <div class="flex items-center gap-1.5 text-[10px] text-text-dark-muted pt-1 border-t border-ink">
                                 <FiMapPin className="w-3 h-3 text-primary shrink-0" />
                                 <span class="font-mono">
                                     La Paz, Bolivia (GPS Activo)
@@ -173,116 +170,114 @@ import {
 
                         <!-- Fila de Formularios Listos -->
                         <div class="flex flex-col gap-2">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 font-mono">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-text-dark-muted font-mono">
                                 Formularios Disponibles
                             </span>
 
-                            <div class="p-2.5 rounded-lg bg-slate-900/60 border border-white/5 flex items-center justify-between">
+                            <div class="p-2 rounded-xl bg-midnight border-2 border-ink flex items-center justify-between">
                                 <div class="flex items-center gap-2">
-                                    <div class="w-5 h-5 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                                        <FiCheck className="w-3 h-3" />
+                                    <div class="w-5 h-5 rounded-lg bg-success border border-ink flex items-center justify-center text-ink">
+                                        <FiCheck
+                                            className="w-3 h-3"
+                                            strokeWidth={3}
+                                        />
                                     </div>
-                                    <span class="text-xs font-medium text-slate-200">
+                                    <span class="text-xs font-bold text-white">
                                         Ficha_Comunal_v2.xml
                                     </span>
                                 </div>
-                                <span class="text-[10px] font-mono text-slate-500">
+                                <span class="text-[10px] font-mono text-success font-bold">
                                     Disponible
                                 </span>
                             </div>
 
-                            <div class="p-2.5 rounded-lg bg-slate-900/60 border border-white/5 flex items-center justify-between">
+                            <div class="p-2 rounded-xl bg-midnight border-2 border-ink flex items-center justify-between">
                                 <div class="flex items-center gap-2">
-                                    <div class="w-5 h-5 rounded bg-primary/10 flex items-center justify-center text-primary">
+                                    <div class="w-5 h-5 rounded-lg bg-primary border border-ink flex items-center justify-center text-ink">
                                         <FiLayers className="w-3 h-3" />
                                     </div>
-                                    <span class="text-xs font-medium text-slate-200">
+                                    <span class="text-xs font-bold text-white">
                                         Muestreo_Agua_pH.xml
                                     </span>
                                 </div>
-                                <span class="text-[10px] font-mono text-slate-500">
+                                <span class="text-[10px] font-mono text-primary font-bold">
                                     Sincronizado
                                 </span>
                             </div>
                         </div>
 
                         <!-- Botón Acción dentro de la App -->
-                        <div class="mt-auto flex flex-col gap-2">
-                            <div class="w-full bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl py-2.5 px-3 flex items-center justify-between shadow-lg shadow-primary/20 text-xs font-bold">
+                        <div class="mt-auto flex flex-col gap-1.5">
+                            <div class="w-full bg-primary border-2 border-ink text-ink rounded-full py-2 px-3 flex items-center justify-between text-xs font-bold uppercase tracking-wider">
                                 <span>Iniciar Nuevo Formulario</span>
                                 <span class="text-sm font-bold">→</span>
                             </div>
-                            <div class="flex items-center justify-between px-1 text-[10px] text-slate-500 font-mono">
+                            <div class="flex items-center justify-between px-1 text-[10px] text-text-dark-muted font-mono">
                                 <span class="flex items-center gap-1">
                                     <FiLock className="w-2.5 h-2.5 text-primary" />{" "}
                                     Almacenamiento Cifrado
                                 </span>
-                                <span>Servidor Central UMSA</span>
+                                <span>Servidor UMSA</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Footer del Teléfono -->
-                    <div class="pt-2 border-t border-white/10 flex items-center justify-center">
-                        <div class="w-24 h-1 bg-white/20 rounded-full"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bento Grid Rediseñado: 1x2 con Lenguaje Formal y Natural -->
-    <section class="w-full py-24 bg-slate-50/75 border-y border-border relative overflow-hidden flex flex-col items-center">
-        <div class="max-w-6xl w-full mx-auto px-6 relative z-10">
+    <!-- 2. Requisitos y Compatibilidad (Cyan Light Band) -->
+    <section class="w-full py-16 lg:py-24 bg-primary-light border-y-[2.5px] border-ink flex flex-col items-center">
+        <div class="max-w-300 w-full mx-auto px-4 sm:px-6">
             <!-- Encabezado de la Sección -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <Badge variant="primary" class="mb-4">
                     Requisitos y Características
                 </Badge>
-                <h2 class="text-text-main font-display text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                <h2 class="text-ink font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-[-0.035em] leading-tight">
                     Diseñada para el{" "}
                     <TextReveal variant="light">trabajo de campo</TextReveal>
                 </h2>
-                <p class="text-text-muted font-sans text-base md:text-lg mt-4">
+                <p class="text-text-muted font-sans text-base sm:text-lg mt-4 font-medium leading-relaxed">
                     Optimizada para garantizar una recolección de información
                     continua y confiable en cualquier región del país.
                 </p>
             </div>
 
-            <!-- Bento Grid 1x2: 7 Columnas (Tarjeta Principal) + 5 Columnas (2 Tarjetas Apiladas) -->
+            <!-- Bento Grid 1x2: 7 Columnas + 5 Columnas -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 <!-- Columna Izquierda: Tarjeta Principal (Requisitos y Compatibilidad) -->
-                <div class="lg:col-span-7 glass-panel p-8 md:p-9 flex flex-col justify-between border border-border hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 rounded-3xl">
+                <div class="lg:col-span-7 bg-white border-[2.5px] border-ink rounded-card p-7 sm:p-9 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
                     <div class="flex flex-col gap-6">
                         <!-- Cabecera de la Tarjeta con Badges -->
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-mono font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full flex items-center gap-1.5">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <span class="text-xs font-mono font-bold uppercase tracking-wider text-ink bg-primary-light border border-ink px-3 py-1 rounded-full flex items-center gap-1.5">
                                 <FiCpu className="w-3.5 h-3.5" /> Compatibilidad
                                 de Sistema
                             </span>
-                            <span class="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
+                            <span class="text-xs font-mono font-bold text-ink bg-success px-2.5 py-0.5 rounded-full border border-ink">
                                 Amplio Soporte Android
                             </span>
                         </div>
 
                         <!-- Indicadores Visuales de Recursos y Versión -->
-                        <div class="w-full rounded-2xl bg-slate-900 border border-white/5 p-5 flex flex-col gap-4 text-white font-mono shadow-sm">
+                        <div class="w-full rounded-2xl bg-midnight-surface border-2 border-ink p-5 flex flex-col gap-4 text-white font-mono">
                             <div class="flex justify-between items-center text-xs">
-                                <span class="text-slate-400 flex items-center gap-2">
+                                <span class="text-text-dark-muted flex items-center gap-2">
                                     <FiSmartphone className="w-4 h-4 text-primary" />{" "}
                                     SISTEMA OPERATIVO
                                 </span>
-                                <span class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
+                                <span class="text-ink font-bold bg-success border border-ink px-2 py-0.5 rounded">
                                     Android 5.0 en adelante
                                 </span>
                             </div>
                             <!-- Barra de compatibilidad visual -->
-                            <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-                                <div class="w-[96%] h-full bg-gradient-to-r from-emerald-500 via-primary to-accent rounded-full"></div>
+                            <div class="w-full h-3 rounded-full bg-midnight border border-ink overflow-hidden">
+                                <div class="w-[96%] h-full bg-primary rounded-full"></div>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 pt-3 border-t border-white/5 text-xs">
+                            <div class="grid grid-cols-2 gap-4 pt-3 border-t border-ink text-xs">
                                 <div class="flex flex-col">
-                                    <span class="text-slate-400 text-[10px]">
+                                    <span class="text-text-dark-muted text-[10px]">
                                         CONSUMO DE MEMORIA
                                     </span>
                                     <span class="text-primary font-bold text-sm">
@@ -290,10 +285,7 @@ import {
                                     </span>
                                 </div>
                                 <div class="flex flex-col">
-                                    <span class="text-slate-400 text-[10px]">
-                                        TAMAÑO DE DESCARGA
-                                    </span>
-                                    <span class="text-emerald-400 font-bold text-sm">
+                                    <span class="text-success font-bold text-sm">
                                         8.4 MB (Instalador completo)
                                     </span>
                                 </div>
@@ -301,11 +293,11 @@ import {
                         </div>
 
                         <!-- Título y Descripción -->
-                        <div class="flex flex-col gap-2.5">
-                            <h3 class="text-text-main font-display text-2xl font-bold">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-ink font-display text-2xl font-bold tracking-tight">
                                 Compatibilidad y Requisitos de Hardware
                             </h3>
-                            <p class="text-text-muted font-sans text-sm md:text-base leading-relaxed">
+                            <p class="text-text-muted font-sans text-sm sm:text-base leading-relaxed font-medium">
                                 Desarrollada para operar de manera estable en
                                 una amplia variedad de modelos, facilitando el
                                 trabajo tanto en teléfonos modernos como en
@@ -316,116 +308,125 @@ import {
                     </div>
 
                     <!-- Ficha Técnica 2x2 en la Base -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 mt-6 border-t border-border">
-                        <div class="p-3 rounded-2xl bg-slate-50/80 border border-border/80 flex flex-col">
-                            <span class="text-[11px] font-bold text-text-muted uppercase">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 mt-6 border-t-2 border-ink">
+                        <div class="p-3.5 rounded-2xl bg-canvas border-2 border-ink flex flex-col">
+                            <span class="text-[11px] font-bold text-text-muted uppercase font-mono">
                                 Versión Mínima
                             </span>
-                            <span class="text-sm font-bold text-text-main">
+                            <span class="text-sm font-bold text-ink">
                                 Android 5.0 (Lollipop)
                             </span>
                         </div>
-                        <div class="p-3 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 flex flex-col">
-                            <span class="text-[11px] font-bold text-emerald-700 uppercase">
+                        <div class="p-3.5 rounded-2xl bg-primary-light border-2 border-ink flex flex-col">
+                            <span class="text-[11px] font-bold text-primary-dark uppercase font-mono">
                                 Versión Recomendada
                             </span>
-                            <span class="text-sm font-bold text-emerald-950">
+                            <span class="text-sm font-bold text-ink">
                                 Android 10 o superior
                             </span>
                         </div>
-                        <div class="p-3 rounded-2xl bg-slate-50/80 border border-border/80 flex flex-col">
-                            <span class="text-[11px] font-bold text-text-muted uppercase">
+                        <div class="p-3.5 rounded-2xl bg-canvas border-2 border-ink flex flex-col">
+                            <span class="text-[11px] font-bold text-text-muted uppercase font-mono">
                                 Memoria RAM
                             </span>
-                            <span class="text-sm font-bold text-text-main">
+                            <span class="text-sm font-bold text-ink">
                                 2 GB mín. (4 GB recomendada)
                             </span>
                         </div>
-                        <div class="p-3 rounded-2xl bg-slate-50/80 border border-border/80 flex flex-col">
-                            <span class="text-[11px] font-bold text-text-muted uppercase">
+                        <div class="p-3.5 rounded-2xl bg-canvas border-2 border-ink flex flex-col">
+                            <span class="text-[11px] font-bold text-text-muted uppercase font-mono">
                                 Modo de Operación
                             </span>
-                            <span class="text-sm font-bold text-text-main">
-                                Autónomo (sin conexión a internet)
+                            <span class="text-sm font-bold text-ink">
+                                Autónomo (100% offline)
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: 2 Tarjetas Apiladas y Equilibradas -->
-                <div class="lg:col-span-5 flex flex-col gap-8 justify-between">
+                <!-- Columna Derecha: 2 Tarjetas Apiladas -->
+                <div class="lg:col-span-5 flex flex-col gap-6 lg:gap-8 justify-between">
                     <!-- Tarjeta 2: Ubicación Geográfica y Privacidad -->
-                    <div class="glass-panel p-7 flex-1 flex flex-col justify-between border border-border hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 rounded-3xl">
+                    <div class="bg-white border-[2.5px] border-ink rounded-card p-7 flex-1 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
                         <div class="flex flex-col gap-4">
                             <!-- Visual de Sensores y Ubicación -->
-                            <div class="w-full rounded-2xl bg-slate-900 border border-white/5 p-4 flex items-center justify-between text-white font-mono shadow-sm">
+                            <div class="w-full rounded-2xl bg-midnight-surface border-2 border-ink p-4 flex items-center justify-between text-white font-mono">
                                 <div class="flex items-center gap-2.5">
-                                    <div class="w-7 h-7 rounded-lg bg-accent/20 flex items-center justify-center text-accent">
+                                    <div class="w-8 h-8 rounded-xl bg-primary border border-ink flex items-center justify-center text-ink">
                                         <FiMapPin className="w-4 h-4" />
                                     </div>
                                     <span class="text-xs font-bold text-white">
-                                        Sensor GPS
+                                        Sensor GPS Satelital
                                     </span>
                                 </div>
-                                <span class="text-[10px] text-accent font-bold px-2 py-0.5 rounded bg-accent/10 border border-accent/30">
-                                    Ubicación Geográfica
+                                <span class="text-[10px] text-ink font-bold px-2 py-0.5 rounded-full bg-success border border-ink">
+                                    Offline Activo
                                 </span>
                             </div>
 
                             <div class="flex flex-col gap-2">
-                                <h3 class="text-text-main font-display text-xl font-bold">
+                                <h3 class="text-ink font-display text-xl font-bold tracking-tight">
                                     Ubicación Geográfica y Privacidad
                                 </h3>
-                                <p class="text-text-muted font-sans text-sm leading-relaxed">
+                                <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
                                     La aplicación solicita únicamente los
                                     permisos indispensables para la recolección
                                     de datos en campo. No contiene publicidad
                                     comercial ni recopila datos personales
-                                    innecesarios para el proyecto.
+                                    ajenos al proyecto.
                                 </p>
                             </div>
                         </div>
 
-                        <ul class="space-y-1.5 text-xs text-text-muted font-bold pt-4 mt-4 border-t border-border">
+                        <ul class="space-y-2 text-xs text-ink font-bold pt-4 mt-4 border-t-2 border-ink">
                             <li class="flex items-center gap-2">
-                                <FiCheck className="text-accent" /> Registro de
-                                coordenadas y puntos geográficos
+                                <div class="w-4 h-4 rounded-full bg-success border border-ink flex items-center justify-center text-ink">
+                                    <FiCheck
+                                        className="w-3 h-3"
+                                        strokeWidth={3}
+                                    />
+                                </div>
+                                Registro de coordenadas y polígonos
                             </li>
                             <li class="flex items-center gap-2">
-                                <FiCheck className="text-accent" /> Captura de
-                                fotografías en calidad original
+                                <div class="w-4 h-4 rounded-full bg-success border border-ink flex items-center justify-center text-ink">
+                                    <FiCheck
+                                        className="w-3 h-3"
+                                        strokeWidth={3}
+                                    />
+                                </div>
+                                Captura de fotografías en calidad original
                             </li>
                         </ul>
                     </div>
 
                     <!-- Tarjeta 3: Seguridad y Respaldo Institucional -->
-                    <div class="glass-panel p-7 flex-1 flex flex-col justify-between border border-border hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 rounded-3xl">
+                    <div class="bg-white border-[2.5px] border-ink rounded-card p-7 flex-1 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
                         <div class="flex flex-col gap-4">
                             <!-- Visual de Servidor y Cifrado -->
-                            <div class="w-full rounded-2xl bg-slate-900 border border-white/5 p-4 flex items-center justify-around text-white font-mono shadow-sm">
+                            <div class="w-full rounded-2xl bg-midnight-surface border-2 border-ink p-4 flex items-center justify-around text-white font-mono">
                                 <div class="flex items-center gap-1.5">
-                                    <FiSmartphone className="w-3.5 h-3.5 text-slate-400" />
-                                    <span class="text-[10px] text-slate-300">
-                                        Dispositivo Móvil
+                                    <FiSmartphone className="w-3.5 h-3.5 text-primary" />
+                                    <span class="text-[10px] text-text-dark-muted">
+                                        Móvil
                                     </span>
                                 </div>
-                                <div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/20 border border-primary/40 text-primary text-[10px] font-bold">
-                                    <FiLock className="w-3 h-3 animate-pulse" />{" "}
-                                    Conexión Segura
+                                <div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary border border-ink text-ink text-[10px] font-bold">
+                                    <FiLock className="w-3 h-3" /> Seguro
                                 </div>
                                 <div class="flex items-center gap-1.5">
-                                    <FiServer className="w-3.5 h-3.5 text-slate-400" />
-                                    <span class="text-[10px] text-slate-300">
-                                        Servidores UMSA
+                                    <FiServer className="w-3.5 h-3.5 text-primary" />
+                                    <span class="text-[10px] text-text-dark-muted">
+                                        UMSA
                                     </span>
                                 </div>
                             </div>
 
                             <div class="flex flex-col gap-2">
-                                <h3 class="text-text-main font-display text-xl font-bold">
+                                <h3 class="text-ink font-display text-xl font-bold tracking-tight">
                                     Seguridad y Respaldo Institucional
                                 </h3>
-                                <p class="text-text-muted font-sans text-sm leading-relaxed">
+                                <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
                                     La información recolectada se transmite de
                                     forma directa a los servidores centrales de
                                     la Universidad Mayor de San Andrés,
@@ -435,15 +436,24 @@ import {
                             </div>
                         </div>
 
-                        <ul class="space-y-1.5 text-xs text-text-muted font-bold pt-4 mt-4 border-t border-border">
+                        <ul class="space-y-2 text-xs text-ink font-bold pt-4 mt-4 border-t-2 border-ink">
                             <li class="flex items-center gap-2">
-                                <FiCheck className="text-primary" />{" "}
-                                Almacenamiento exclusivo en servidores
-                                universitarios
+                                <div class="w-4 h-4 rounded-full bg-success border border-ink flex items-center justify-center text-ink">
+                                    <FiCheck
+                                        className="w-3 h-3"
+                                        strokeWidth={3}
+                                    />
+                                </div>
+                                Almacenamiento en datacenter universitario
                             </li>
                             <li class="flex items-center gap-2">
-                                <FiCheck className="text-primary" /> Transmisión
-                                protegida mediante canales cifrados
+                                <div class="w-4 h-4 rounded-full bg-success border border-ink flex items-center justify-center text-ink">
+                                    <FiCheck
+                                        className="w-3 h-3"
+                                        strokeWidth={3}
+                                    />
+                                </div>
+                                Transmisión por canales cifrados SSL/TLS
                             </li>
                         </ul>
                     </div>
@@ -452,98 +462,96 @@ import {
         </div>
     </section>
 
-    <!-- Guía de Instalación de la Aplicación (3 Pasos Claros) -->
-    <section class="w-full py-24 relative overflow-hidden flex flex-col items-center">
-        <div class="max-w-5xl w-full mx-auto px-6 relative z-10">
+    <!-- 3. Guía de Instalación de la Aplicación (Main Canvas) -->
+    <section class="w-full py-16 lg:py-24 bg-canvas flex flex-col items-center">
+        <div class="max-w-300 w-full mx-auto px-4 sm:px-6">
             <!-- Encabezado de la sección -->
-            <div class="text-center max-w-2xl mx-auto mb-20">
+            <div class="text-center max-w-2xl mx-auto mb-16">
                 <Badge variant="primary" class="mb-4">
                     Guía de Instalación
                 </Badge>
-                <h2 class="text-text-main font-display text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                <h2 class="text-ink font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-[-0.035em] leading-tight">
                     ¿Cómo instalar la aplicación{" "}
                     <TextReveal variant="light">en su dispositivo?</TextReveal>
                 </h2>
-                <p class="text-text-muted font-sans text-base md:text-lg mt-4">
+                <p class="text-text-muted font-sans text-base sm:text-lg mt-4 font-medium leading-relaxed">
                     Siga estos tres sencillos pasos para instalar y comenzar a
                     utilizar la aplicación en su teléfono o tableta.
                 </p>
             </div>
 
             <!-- Grid de 3 Pasos Reales para APK -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Paso 1: Descargar -->
-                <div class="glass-panel p-8 flex flex-col justify-between border border-border hover:border-primary/30 transition-all duration-300 group rounded-3xl">
-                    <div class="flex flex-col gap-6">
-                        <div class="w-full h-24 rounded-2xl bg-slate-900 border border-white/5 flex flex-col justify-between p-4 relative overflow-hidden shadow-sm">
-                            <div class="flex justify-between items-center text-xs font-mono text-slate-400">
+                <div class="bg-white border-[2.5px] border-ink rounded-card p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+                    <div class="flex flex-col gap-5">
+                        <div class="w-full h-24 rounded-2xl bg-midnight-surface border-2 border-ink flex flex-col justify-between p-4 relative overflow-hidden">
+                            <div class="flex justify-between items-center text-xs font-mono text-text-dark-muted">
                                 <span class="text-primary font-bold flex items-center gap-1.5">
-                                    <FiDownload className="w-3.5 h-3.5 animate-bounce" />{" "}
+                                    <FiDownload className="w-3.5 h-3.5" />{" "}
                                     DESCARGA DIRECTA
                                 </span>
                                 <span class="text-white font-bold">8.4 MB</span>
                             </div>
-                            <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
-                                <div class="h-full bg-primary rounded-full animate-[loading-bar_3s_infinite_linear]"></div>
+                            <div class="w-full h-2 rounded-full bg-midnight border border-ink overflow-hidden">
+                                <div class="h-full bg-primary rounded-full w-full"></div>
                             </div>
-                            <span class="text-[10px] text-slate-400 font-mono">
+                            <span class="text-[10px] text-text-dark-muted font-mono">
                                 DATA-UMSA-Collect-release-3.apk
                             </span>
                         </div>
 
-                        <div class="flex flex-col gap-2.5">
-                            <div class="w-8 h-8 rounded-xl bg-primary/10 text-primary-dark font-mono font-bold text-sm flex items-center justify-center">
+                        <div class="flex flex-col gap-2">
+                            <div class="w-9 h-9 rounded-xl bg-primary text-ink border-2 border-ink font-mono font-extrabold text-sm flex items-center justify-center">
                                 1
                             </div>
-                            <h3 class="text-text-main font-display text-lg font-bold">
+                            <h3 class="text-ink font-display text-lg font-bold tracking-tight">
                                 Descargar el archivo
                             </h3>
-                            <p class="text-text-muted font-sans text-sm leading-relaxed">
+                            <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
                                 Presione el botón de descarga en esta página
                                 para obtener el archivo oficial de instalación (
-                                <strong class="text-text-main font-bold">
-                                    .apk
-                                </strong>
-                                ) en su dispositivo.
+                                <strong class="text-ink">.apk</strong>) en su
+                                dispositivo.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Paso 2: Permitir Origen Seguro -->
-                <div class="glass-panel p-8 flex flex-col justify-between border border-border hover:border-primary/30 transition-all duration-300 group rounded-3xl">
-                    <div class="flex flex-col gap-6">
-                        <div class="w-full h-24 rounded-2xl bg-slate-900 border border-white/5 flex flex-col justify-between p-4 relative overflow-hidden shadow-sm">
+                <div class="bg-white border-[2.5px] border-ink rounded-card p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+                    <div class="flex flex-col gap-5">
+                        <div class="w-full h-24 rounded-2xl bg-midnight-surface border-2 border-ink flex flex-col justify-between p-4 relative overflow-hidden">
                             <div class="flex items-center gap-2">
-                                <div class="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center">
-                                    <FiShield className="w-3 h-3" />
+                                <div class="w-6 h-6 rounded-lg bg-warning border border-ink text-ink flex items-center justify-center font-bold">
+                                    <FiShield className="w-3.5 h-3.5" />
                                 </div>
                                 <span class="text-[11px] font-bold text-white font-mono">
                                     Seguridad del Sistema
                                 </span>
                             </div>
-                            <div class="flex items-center justify-between bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/5">
-                                <span class="text-[10px] text-slate-300 font-mono">
+                            <div class="flex items-center justify-between bg-midnight px-3 py-1.5 rounded-xl border border-ink">
+                                <span class="text-[10px] text-text-dark-muted font-mono">
                                     Permitir desde esta fuente
                                 </span>
-                                <span class="w-6 h-3 rounded-full bg-primary flex items-center justify-end px-0.5">
-                                    <span class="w-2 h-2 rounded-full bg-white"></span>
+                                <span class="w-7 h-4 rounded-full bg-success border border-ink flex items-center justify-end px-0.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="flex flex-col gap-2.5">
-                            <div class="w-8 h-8 rounded-xl bg-primary/10 text-primary-dark font-mono font-bold text-sm flex items-center justify-center">
+                        <div class="flex flex-col gap-2">
+                            <div class="w-9 h-9 rounded-xl bg-primary text-ink border-2 border-ink font-mono font-extrabold text-sm flex items-center justify-center">
                                 2
                             </div>
-                            <h3 class="text-text-main font-display text-lg font-bold">
+                            <h3 class="text-ink font-display text-lg font-bold tracking-tight">
                                 Autorizar la instalación
                             </h3>
-                            <p class="text-text-muted font-sans text-sm leading-relaxed">
+                            <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
                                 Al abrir el archivo, si el sistema solicita
-                                confirmación por tratarse de una descarga web,
-                                seleccione la opción{" "}
-                                <strong class="text-text-main font-bold">
+                                confirmación por tratarse de una descarga
+                                institucional, seleccione la opción{" "}
+                                <strong class="text-ink">
                                     "Permitir desde esta fuente"
                                 </strong>{" "}
                                 para continuar.
@@ -553,33 +561,36 @@ import {
                 </div>
 
                 <!-- Paso 3: Abrir y Sincronizar -->
-                <div class="glass-panel p-8 flex flex-col justify-between border border-border hover:border-primary/30 transition-all duration-300 group rounded-3xl">
-                    <div class="flex flex-col gap-6">
-                        <div class="w-full h-24 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center gap-3 relative overflow-hidden shadow-sm">
-                            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 animate-[pulse-check_2s_infinite]">
-                                <FiCheckCircle className="w-5 h-5" />
+                <div class="bg-white border-[2.5px] border-ink rounded-card p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+                    <div class="flex flex-col gap-5">
+                        <div class="w-full h-24 rounded-2xl bg-midnight-surface border-2 border-ink flex items-center justify-center gap-3 relative overflow-hidden">
+                            <div class="w-10 h-10 rounded-xl bg-success border-2 border-ink flex items-center justify-center text-ink">
+                                <FiCheckCircle
+                                    className="w-6 h-6"
+                                    strokeWidth={2.5}
+                                />
                             </div>
                             <div class="flex flex-col">
                                 <span class="text-xs text-white font-mono font-bold">
                                     Conexión Establecida
                                 </span>
-                                <span class="text-[10px] text-slate-400 font-mono">
-                                    Servidores UMSA
+                                <span class="text-[10px] text-primary font-mono">
+                                    Servidores UMSA Activos
                                 </span>
                             </div>
                         </div>
 
-                        <div class="flex flex-col gap-2.5">
-                            <div class="w-8 h-8 rounded-xl bg-primary/10 text-primary-dark font-mono font-bold text-sm flex items-center justify-center">
+                        <div class="flex flex-col gap-2">
+                            <div class="w-9 h-9 rounded-xl bg-primary text-ink border-2 border-ink font-mono font-extrabold text-sm flex items-center justify-center">
                                 3
                             </div>
-                            <h3 class="text-text-main font-display text-lg font-bold">
+                            <h3 class="text-ink font-display text-lg font-bold tracking-tight">
                                 Iniciar sesión y sincronizar
                             </h3>
-                            <p class="text-text-muted font-sans text-sm leading-relaxed">
+                            <p class="text-text-muted font-sans text-sm leading-relaxed font-medium">
                                 Abra{" "}
-                                <strong class="text-text-main font-bold">
-                                    DataUMSA Collect
+                                <strong class="text-ink">
+                                    DATAUMSA Collect
                                 </strong>
                                 , ingrese con sus credenciales institucionales y
                                 descargue los formularios de su proyecto para
@@ -589,75 +600,36 @@ import {
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Banner Inferior de Hoja de Ruta -->
-            <div class="mt-16 p-6 rounded-3xl bg-slate-900 text-white border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shrink-0">
-                        <FiClock className="w-6 h-6" />
-                    </div>
-                    <div class="flex flex-col">
-                        <h4 class="text-base font-bold font-display text-white">
-                            Publicación en Google Play Store
-                        </h4>
-                        <p class="text-xs text-slate-300 font-sans mt-0.5 max-w-xl">
-                            La aplicación será publicada en la tienda oficial de
-                            Google Play bajo la cuenta institucional de la
-                            Universidad Mayor de San Andrés una vez concluido el
-                            proceso formal de homologación universitaria.
-                        </p>
-                    </div>
+    <!-- 4. Banner Inferior de Hoja de Ruta (Midnight Band) -->
+    <section class="w-full py-16 lg:py-20 bg-midnight text-white border-t-[2.5px] border-ink flex justify-center">
+        <div class="max-w-300 w-full mx-4 sm:mx-6 p-7 sm:p-9 rounded-[2.5rem] bg-midnight-surface border-3 border-ink flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-primary border-2 border-ink flex items-center justify-center text-ink shrink-0 font-bold">
+                    <FiClock className="w-7 h-7" />
                 </div>
-                <a
-                    href="/apk/DATA-UMSA-Collect-release-3.apk"
-                    download="DATA-UMSA-Collect-release-3.apk"
-                    class="bg-primary hover:bg-primary-dark text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl transition-colors duration-200 shrink-0 inline-flex items-center gap-2"
-                >
-                    <FiDownload className="w-4 h-4" />
-                    <span>Descargar archivo (.apk)</span>
-                </a>
+                <div class="flex flex-col">
+                    <h4 class="text-lg sm:text-xl font-extrabold font-display text-white tracking-tight">
+                        Publicación en Google Play Store
+                    </h4>
+                    <p class="text-xs sm:text-sm text-text-dark-muted font-sans font-medium mt-1 max-w-xl leading-relaxed">
+                        La aplicación será publicada en la tienda oficial de
+                        Google Play bajo la cuenta institucional de la
+                        Universidad Mayor de San Andrés una vez concluido el
+                        proceso formal de homologación universitaria.
+                    </p>
+                </div>
             </div>
+            <a
+                href="/apk/DATA-UMSA-Collect-release-3.apk"
+                download="DATA-UMSA-Collect-release-3.apk"
+                class="btn-primary text-xs uppercase tracking-wider px-6 py-3.5 shrink-0 inline-flex items-center gap-2"
+            >
+                <FiDownload className="w-4 h-4" />
+                <span>Descargar archivo (.apk)</span>
+            </a>
         </div>
     </section>
 </Layout>
-
-<style>
-    /* Animaciones exclusivas del rediseño */
-    .animate-pulse-slow {
-        animation: pulse-glow 8s ease-in-out infinite alternate;
-    }
-    @keyframes pulse-glow {
-        0% {
-            opacity: 0.3;
-            transform: scale(0.95);
-        }
-        100% {
-            opacity: 0.7;
-            transform: scale(1.05);
-        }
-    }
-
-    /* Barra de carga */
-    @keyframes loading-bar {
-        0% {
-            width: 0%;
-        }
-        80%,
-        100% {
-            width: 100%;
-        }
-    }
-
-    /* Parpadeo del check de éxito */
-    @keyframes pulse-check {
-        0%,
-        100% {
-            transform: scale(1);
-            opacity: 0.8;
-        }
-        50% {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-    }
-</style>
